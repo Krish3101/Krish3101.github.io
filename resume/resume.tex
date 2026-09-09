@@ -229,22 +229,22 @@ Wrote an Express REST gateway that talks to the Fabric Gateway over gRPC/TLS, se
 % ---------------------------------------------------------
 
 \resumeProjectHeading
-{GeoAgent: Geospatial Microservices Platform}
+{GeoAgent: Geospatial LLM Assistant}
 {https://github.com/Krish3101/geo-agents}
-{FastAPI, GeoPandas, Shapely, Redis, Docker}
+{Pydantic-AI, FastAPI, GeoPandas, Redis, Docker}
 
 \begin{itemize}
 
 \resumeItem{
-Split the platform into two FastAPI microservices: a Vector Agent for boundary geocoding and a Raster Agent for satellite imagery clipping.
+Built a single async FastAPI service that maps Python geospatial functions into LLM tools through Pydantic-AI, so every model-issued call is validated against a typed contract instead of a hand-rolled planner loop.
 }
 
 \resumeItem{
-Added WebSocket log streaming and geometry repair for malformed coordinates and invalid polygons.
+Implemented the spatial toolset over OpenStreetMap boundaries and Planetary Computer Sentinel-2 imagery, with geometry repair for malformed coordinates and invalid polygons.
 }
 
 \resumeItem{
-Integrated Gemma for natural-language spatial queries; deployed the services with Docker Compose.
+Streamed task logs over WebSockets from a Redis-backed state manager that replays missed updates to late-connecting clients; served Gemma via Docker Compose.
 }
 
 \end{itemize}

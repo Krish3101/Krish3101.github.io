@@ -11,8 +11,30 @@
 <meta property="og:title" content="Krishkumar Kalya — Software Engineer">
 <meta property="og:description" content="Backend systems, distributed ledgers, geospatial pipelines and AI tooling.">
 <meta property="og:url" content="https://krish3101.github.io/">
+<meta property="og:image" content="https://krish3101.github.io/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0e14">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='system-ui'>&#9670;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Krishkumar Kalya",
+  "jobTitle": "Software Engineer",
+  "url": "https://krish3101.github.io/",
+  "email": "krishkalya31012005@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "MIT ADT University, Pune" },
+  "sameAs": [
+    "https://github.com/Krish3101",
+    "https://www.linkedin.com/in/krishkumar-kalya-b05b941b3/"
+  ]
+}
+</script>
 <script>
   /* set theme before first paint to avoid a flash of the wrong palette */
   (function () {
@@ -27,7 +49,7 @@
 
 <header class="nav">
   <div class="wrap nav__inner">
-    <a class="nav__brand" href="#top"><span class="nav__mark">◆</span> Krish Kalya</a>
+    <a class="nav__brand" href="#top"><span class="nav__mark">◆</span> <span class="nav__name">Krish Kalya</span></a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
@@ -44,8 +66,8 @@
 <main id="main">
 
   <section class="hero" id="top">
-    <div class="wrap">
-      <p class="hero__eyebrow">Open to SDE roles &middot; Graduating May 2027</p>
+    <div class="wrap hero__inner">
+      <p class="hero__eyebrow"><span class="dot" aria-hidden="true"></span>Open to SDE roles &middot; Graduating May 2027</p>
       <h1 class="hero__name">Krishkumar Kalya</h1>
       <p class="hero__role">Software Engineer — Backend &amp; Distributed Systems</p>
       <p class="hero__blurb">
@@ -55,7 +77,7 @@
         Currently studying Computer Science Engineering at MIT ADT University, Pune.
       </p>
       <div class="hero__actions">
-        <a class="btn btn--primary" id="link-resume" href="assets/Krishkumar-Kalya-Resume.pdf" hidden>Resume (PDF)</a>
+        <a class="btn btn--primary" id="link-resume" href="resume/Krishkumar-Kalya-Resume.pdf" hidden>Resume (PDF)</a>
         <a class="btn" href="https://github.com/Krish3101" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" id="link-linkedin" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a>
         <a class="btn" href="mailto:krishkalya31012005@gmail.com">Email</a>
@@ -72,67 +94,75 @@
   <section class="section" id="projects">
     <div class="wrap">
       <header class="section__head">
-        <h2>Selected Projects</h2>
-        <p>Four I would happily be interviewed on line by line. Every repository below has a test suite, a README, and a reproducible run path.</p>
+        <p class="section__num">01</p>
+        <h2>Projects</h2>
+        <p class="section__lede">Nine repositories, each with a test suite, a README and a reproducible run path. Open any card for the source.</p>
       </header>
+      <div class="chips" id="project-filters" role="group" aria-label="Filter projects by area"></div>
       <div class="grid" id="project-grid"></div>
-      <div class="more" id="more-projects"></div>
     </div>
   </section>
 
   <section class="section section--alt" id="skills">
     <div class="wrap">
       <header class="section__head">
+        <p class="section__num">02</p>
         <h2>Technical Skills</h2>
-        <p>Grouped by what I actually reach for, not by what I have once read about.</p>
+        <p class="section__lede">Grouped by what I actually reach for, not by what I have once read about.</p>
       </header>
       <div class="skills" id="skills-grid"></div>
     </div>
   </section>
 
   <section class="section" id="about">
-    <div class="wrap about">
-      <div>
+    <div class="wrap">
+      <header class="section__head">
+        <p class="section__num">03</p>
         <h2>About</h2>
-        <p>
-          I am a Computer Science Engineering student at MIT ADT University, Pune, who prefers
-          systems whose behaviour you can reason about on paper. Most of my work sits behind the API line: rule engines,
-          ledgers, ingestion pipelines, and the schemas that keep them honest.
-        </p>
-        <p>
-          My habit across every repository here is the same — write the deterministic core
-          first, put it under test, and only then attach the transport, the UI, or the model.
-          It is why the AI projects fall back gracefully when a key is missing and why the
-          geospatial pipeline does its maths in PostGIS rather than in Python.
-        </p>
+      </header>
+      <div class="about">
+        <div class="about__body">
+          <p>
+            I am a Computer Science Engineering student at MIT ADT University, Pune, who prefers
+            systems whose behaviour you can reason about on paper. Most of my work sits behind the API line: rule engines,
+            ledgers, ingestion pipelines, and the schemas that keep them honest.
+          </p>
+          <p>
+            My habit across every repository here is the same — write the deterministic core
+            first, put it under test, and only then attach the transport, the UI, or the model.
+            It is why the AI projects fall back gracefully when a key is missing and why the
+            geospatial pipeline does its maths in PostGIS rather than in Python.
+          </p>
+        </div>
+        <aside class="card card--edu">
+          <h3>Education</h3>
+          <p class="edu__degree">B.Tech, Computer Science Engineering</p>
+          <p class="edu__meta">MIT ADT University, Pune, India</p>
+          <p class="edu__meta">CGPA 8.68 / 10 &middot; Expected May 2027</p>
+          <h4>Relevant coursework</h4>
+          <ul class="edu__list">
+            <li>Data Structures &amp; Algorithms</li>
+            <li>Database Management Systems</li>
+            <li>Computer Networks</li>
+            <li>Operating Systems</li>
+            <li>Object-Oriented Programming</li>
+            <li>Software Engineering</li>
+          </ul>
+          <h4>Languages</h4>
+          <ul class="edu__list">
+            <li>English &mdash; professional</li>
+            <li>Hindi &mdash; native</li>
+          </ul>
+        </aside>
       </div>
-      <aside class="card card--edu">
-        <h3>Education</h3>
-        <p class="edu__degree">B.Tech, Computer Science Engineering</p>
-        <p class="edu__meta">MIT ADT University, Pune, India</p>
-        <p class="edu__meta">CGPA 8.68 / 10 &middot; Expected May 2027</p>
-        <h4>Relevant coursework</h4>
-        <ul class="edu__list">
-          <li>Data Structures &amp; Algorithms</li>
-          <li>Database Management Systems</li>
-          <li>Computer Networks</li>
-          <li>Operating Systems</li>
-          <li>Object-Oriented Programming</li>
-          <li>Software Engineering</li>
-        </ul>
-        <h4>Languages</h4>
-        <ul class="edu__list">
-          <li>English &mdash; professional</li>
-          <li>Hindi &mdash; native</li>
-        </ul>
-      </aside>
     </div>
   </section>
 
   <section class="section section--alt" id="contact">
     <div class="wrap contact">
+      <p class="section__num">04</p>
       <h2>Get in touch</h2>
-      <p>Based in Pune, Maharashtra. Open to software engineering roles from mid-2027,
+      <p class="contact__lede">Based in Pune, Maharashtra. Open to software engineering roles from mid-2027,
         and to internships before then. The fastest route is email.</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="mailto:krishkalya31012005@gmail.com">krishkalya31012005@gmail.com</a>
