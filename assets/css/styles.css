@@ -120,7 +120,7 @@ a:hover { text-decoration: underline; }
 .chip.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
 /* ---------- project grid ---------- */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.1rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 1.1rem; }
 .card {
   display: flex; flex-direction: column;
   background: var(--surface); border: 1px solid var(--border);
@@ -128,7 +128,7 @@ a:hover { text-decoration: underline; }
   transition: transform .18s, border-color .18s;
 }
 .card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.card__top { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
+.card__top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .35rem .75rem; }
 .card__title { font-size: 1.08rem; margin: 0; }
 .card__kind { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); font-weight: 650; white-space: nowrap; }
 .card__desc { color: var(--muted); font-size: .93rem; margin: .55rem 0 1rem; }
@@ -144,7 +144,7 @@ a:hover { text-decoration: underline; }
 .card.is-hidden { display: none; }
 
 /* ---------- skills ---------- */
-.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.1rem; }
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1.1rem; }
 .skill { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; }
 .skill h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: .85rem; }
 .skill ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem; }

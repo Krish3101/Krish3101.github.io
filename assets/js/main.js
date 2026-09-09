@@ -6,7 +6,7 @@ const GH = 'https://github.com/Krish3101';
    so the live site never ships a link that 404s. */
 const PROFILE = {
   // Your full LinkedIn profile URL, e.g. 'https://www.linkedin.com/in/your-handle'
-  linkedin: null,
+  linkedin: 'https://www.linkedin.com/in/krishkumar-kalya-b05b941b3/',
   // Drop the PDF at assets/Krishkumar-Kalya-Resume.pdf and this button reveals itself.
   resume: 'assets/Krishkumar-Kalya-Resume.pdf'
 };
