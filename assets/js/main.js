@@ -7,14 +7,15 @@ const GH = 'https://github.com/Krish3101';
 const PROFILE = {
   // Your full LinkedIn profile URL, e.g. 'https://www.linkedin.com/in/your-handle'
   linkedin: 'https://www.linkedin.com/in/krishkumar-kalya-b05b941b3/',
-  // Drop the PDF at assets/Krishkumar-Kalya-Resume.pdf and this button reveals itself.
-  resume: 'assets/Krishkumar-Kalya-Resume.pdf'
+  // Built from resume/resume.tex. Recompile with: tectonic -X compile resume/resume.tex --outdir resume
+  resume: 'resume/Krishkumar-Kalya-Resume.pdf'
 };
 
 const PROJECTS = [
   {
     name: 'Supply Chain Dispute Ledger',
     repo: 'dispute-ledger',
+    featured: true,
     kind: 'Distributed Ledger',
     cats: ['systems'],
     desc: 'An append-only dispute resolution system on Hyperledger Fabric. Partners raise disputes and attach evidence; arbiters resolve them. Every action is attributed, timestamped and immutable.',
@@ -28,7 +29,8 @@ const PROJECTS = [
   },
   {
     name: 'Traffic Violation System',
-    repo: 'traffic-app',
+    repo: 'traffic-rule-engine',
+    featured: true,
     kind: 'Rule Engine',
     cats: ['systems'],
     desc: 'A deterministic rule engine for adjudicating speeding violations. Vehicle events go in, configurable thresholds decide whether a violation occurred and which penalty applies.',
@@ -42,7 +44,8 @@ const PROJECTS = [
   },
   {
     name: 'Farmland Processing Pipeline',
-    repo: 'data-pipeline',
+    repo: 'farmland-pipeline',
+    featured: true,
     kind: 'GIS Microservice',
     cats: ['systems', 'ai'],
     desc: 'A high-throughput GIS service that ingests heterogeneous farmland coordinate data and serves strict RFC 7946 GeoJSON in WGS84.',
@@ -57,6 +60,7 @@ const PROJECTS = [
   {
     name: 'GeoAgent',
     repo: 'geo-agents',
+    featured: true,
     kind: 'AI Agent',
     cats: ['ai'],
     desc: 'A geospatial assistant that turns natural language into real spatial work — fetching administrative boundaries from OpenStreetMap and Sentinel-2 raster imagery from the Planetary Computer.',
@@ -69,9 +73,9 @@ const PROJECTS = [
     live: null
   },
   {
-    name: 'KisanAI',
-    repo: 'kisan-ai',
-    kind: 'Full-Stack AI',
+    name: 'Kisan Crop Risk',
+    repo: 'kisan-crop-risk',
+    kind: 'Rules Engine',
     cats: ['ai', 'fullstack'],
     desc: 'Crop risk assessment that combines a plot’s crop and growth stage with a five-day forecast to produce prioritised, reproducible risk assessments in plain language.',
     points: [
@@ -97,7 +101,7 @@ const PROJECTS = [
     live: null
   },
   {
-    name: 'Recipe AI',
+    name: 'Recipe Finder',
     repo: 'recipe-finder',
     kind: 'Full-Stack ML',
     cats: ['fullstack', 'ai'],
@@ -126,7 +130,7 @@ const PROJECTS = [
   },
   {
     name: 'Task Manager',
-    repo: 'to-do-app',
+    repo: 'task-manager',
     kind: 'Full-Stack',
     cats: ['fullstack'],
     desc: 'A decoupled multi-user task manager with secure registration, login and full CRUD over persistent storage.',
@@ -141,12 +145,12 @@ const PROJECTS = [
 ];
 
 const SKILLS = [
-  { group: 'Languages', items: ['Java', 'Python', 'JavaScript', 'SQL', 'Bash', 'HTML/CSS'] },
-  { group: 'Backend', items: ['Spring Boot 3', 'FastAPI', 'Node.js', 'Express', 'Flask', 'REST', 'JWT', 'gRPC'] },
-  { group: 'Data & Storage', items: ['PostgreSQL', 'PostGIS', 'MySQL', 'SQLite', 'SQLAlchemy', 'Redis', 'Hyperledger Fabric'] },
-  { group: 'Frontend', items: ['React 19', 'Vite', 'Tailwind CSS', 'Bootstrap', 'PyQt6'] },
-  { group: 'AI & Geospatial', items: ['Pydantic-AI', 'scikit-learn', 'GeoPandas', 'Shapely', 'OSMnx', 'STAC / Sentinel-2'] },
-  { group: 'Tooling', items: ['Docker', 'Docker Compose', 'Git', 'Maven', 'uv', 'Pytest', 'JUnit', 'Linux'] }
+  { group: 'Languages', items: ['Java', 'Python', 'JavaScript', 'SQL'] },
+  { group: 'Backend', items: ['Spring Boot', 'FastAPI', 'Node.js', 'Express', 'REST', 'JWT', 'gRPC'] },
+  { group: 'Data & Storage', items: ['PostgreSQL', 'PostGIS', 'MySQL', 'Redis', 'Hyperledger Fabric'] },
+  { group: 'AI & Geospatial', items: ['Pydantic-AI', 'scikit-learn', 'GeoPandas', 'Shapely'] },
+  { group: 'Frontend', items: ['React', 'Tailwind CSS'] },
+  { group: 'Tooling', items: ['Docker', 'Git', 'Maven', 'Pytest', 'JUnit', 'Linux'] }
 ];
 
 /* ---------- render ---------- */
@@ -172,27 +176,26 @@ function projectCard(p) {
     </article>`;
 }
 
-document.getElementById('project-grid').innerHTML = PROJECTS.map(projectCard).join('');
+const featured = PROJECTS.filter((p) => p.featured);
+const rest = PROJECTS.filter((p) => !p.featured);
+
+document.getElementById('project-grid').innerHTML = featured.map(projectCard).join('');
+
+document.getElementById('more-projects').innerHTML = rest.length ? `
+  <h3 class="more__head">Also on GitHub</h3>
+  <ul class="more__list">
+    ${rest.map((p) => `
+      <li>
+        <a href="${GH}/${esc(p.repo)}" target="_blank" rel="noopener">${esc(p.name)}</a>
+        <span>${esc(p.tags.slice(0, 3).join(' \u00b7 '))}</span>
+      </li>`).join('')}
+  </ul>` : '';
 
 document.getElementById('skills-grid').innerHTML = SKILLS.map((s) => `
   <div class="skill">
     <h3>${esc(s.group)}</h3>
     <ul>${s.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
   </div>`).join('');
-
-/* ---------- filtering ---------- */
-const cards = [...document.querySelectorAll('#project-grid .card')];
-document.querySelectorAll('.chip').forEach((chip) => {
-  chip.addEventListener('click', () => {
-    document.querySelectorAll('.chip').forEach((c) => c.classList.remove('is-active'));
-    chip.classList.add('is-active');
-    const f = chip.dataset.filter;
-    cards.forEach((card) => {
-      const match = f === 'all' || card.dataset.cats.split(' ').includes(f);
-      card.classList.toggle('is-hidden', !match);
-    });
-  });
-});
 
 /* ---------- theme ---------- */
 const root = document.documentElement;

@@ -109,15 +109,13 @@ a:hover { text-decoration: underline; }
 .section__head { max-width: 60ch; margin-bottom: 2rem; }
 .section__head p { color: var(--muted); margin: 0; }
 
-/* ---------- filters ---------- */
-.filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.6rem; }
-.chip {
-  padding: .42rem .9rem; border-radius: 999px; font-size: .87rem; font-weight: 550;
-  border: 1px solid var(--border); background: var(--surface); color: var(--muted); cursor: pointer;
-  transition: all .15s;
-}
-.chip:hover { color: var(--text); border-color: var(--accent); }
-.chip.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
+/* ---------- secondary project list ---------- */
+.more { margin-top: 2.2rem; padding-top: 1.6rem; border-top: 1px solid var(--border); }
+.more__head { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: .9rem; }
+.more__list { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.more__list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .7rem; font-size: .92rem; }
+.more__list a { font-weight: 600; }
+.more__list span { color: var(--muted); font-size: .85rem; font-family: var(--mono); }
 
 /* ---------- project grid ---------- */
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 1.1rem; }
@@ -141,7 +139,7 @@ a:hover { text-decoration: underline; }
 }
 .card__links { display: flex; gap: .5rem; margin-top: auto; }
 .card__links .btn { padding: .42rem .8rem; font-size: .85rem; }
-.card.is-hidden { display: none; }
+@media (min-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ---------- skills ---------- */
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 1.1rem; }

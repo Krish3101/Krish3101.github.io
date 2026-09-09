@@ -1,0 +1,297 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.52in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{setspace}
+
+% ---------------------------------------------------------
+% COLORS
+% ---------------------------------------------------------
+\definecolor{darkblue}{RGB}{0,51,102}
+
+% ---------------------------------------------------------
+% HYPERLINK SETUP
+% ---------------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    pdfborder={0 0 0}
+}
+
+% ---------------------------------------------------------
+% SECTION FORMATTING
+% ---------------------------------------------------------
+\titleformat{\section}
+    {\large\bfseries\color{darkblue}}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+% ---------------------------------------------------------
+% CUSTOM COMMANDS
+% ---------------------------------------------------------
+
+% Education / Experience heading
+\newcommand{\resumeSubheading}[4]{%
+    \item[]
+    \noindent
+    \textbf{#1}\hfill\textit{#2}\\
+    \textit{\small #3}\hfill\small #4
+    \par\vspace{0.8pt}
+}
+
+% Project heading (Inline format: Name | GitHub | Tech Stack)
+\newcommand{\resumeProjectHeading}[3]{%
+    \item[]
+    \noindent
+    \textbf{#1} \ $|$ \ \href{#2}{\small\faGithub\ GitHub} \ $|$ \ \textit{\small #3}
+    \par\vspace{0.8pt}
+}
+
+\newcommand{\resumeItem}[1]{%
+    \item\small #1
+}
+
+% ---------------------------------------------------------
+% LIST SETTINGS
+% ---------------------------------------------------------
+\setlist[itemize]{
+    leftmargin=12pt,
+    itemsep=2.5pt,
+    parsep=0pt,
+    topsep=1pt
+}
+
+\setlist[itemize,2]{
+    leftmargin=12pt,
+    itemsep=0.8pt,
+    parsep=0pt,
+    topsep=0.8pt
+}
+
+% ---------------------------------------------------------
+% LINE SPACING
+% ---------------------------------------------------------
+\setstretch{1.06}
+
+% ---------------------------------------------------------
+% REMOVE PAGE NUMBERS
+% ---------------------------------------------------------
+\pagestyle{empty}
+
+% =========================================================
+% DOCUMENT
+% =========================================================
+\begin{document}
+
+% =========================================================
+% HEADER
+% =========================================================
+
+\begin{center}
+
+{\LARGE\bfseries\color{darkblue} KRISHKUMAR KALYA}\\[2.5pt]
+
+\small
+\faPhone\ +91-95189-73317
+\quad $|$ \quad
+\faEnvelope\ \href{mailto:krishkalya31012005@gmail.com}{krishkalya31012005@gmail.com}
+\quad $|$ \quad
+\faMapMarker\ Pune, Maharashtra
+\\[1.5pt]
+
+\faLinkedin\ \href{https://www.linkedin.com/in/krishkumar-kalya-b05b941b3/}{linkedin.com/in/krishkumar-kalya}
+\quad $|$ \quad
+\faGithub\ \href{https://github.com/Krish3101}{github.com/Krish3101}
+\quad $|$ \quad
+\faGlobe\ \href{https://krish3101.github.io}{krish3101.github.io}
+
+\end{center}
+
+\vspace{-4pt}
+
+% =========================================================
+% EDUCATION
+% =========================================================
+
+\section{EDUCATION}
+
+\begin{itemize}[leftmargin=0pt]
+
+\resumeSubheading
+{MIT ADT University}
+{Pune, India}
+{Bachelor of Technology in Computer Science and Engineering \textbar\ \textbf{CGPA: 8.68}}
+{Expected May 2027}
+
+\vspace{2pt}
+\item[]\small{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Management Systems, Object-Oriented Programming, Operating Systems, Computer Networks, Software Engineering}
+
+\end{itemize}
+
+% =========================================================
+% TECHNICAL SKILLS
+% =========================================================
+
+\section{TECHNICAL SKILLS}
+
+\begin{itemize}[leftmargin=0pt]
+
+\item[]\small{\textbf{Languages:} Python, Java, SQL, JavaScript}
+\vspace{1.5pt}
+\item[]\small{\textbf{Databases:} PostgreSQL, PostGIS, MySQL, Redis}
+\vspace{1.5pt}
+\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Flask, Spring Data JPA, Scikit-learn}
+\vspace{1.5pt}
+\item[]\small{\textbf{Tools \& Platforms:} Git, GitHub, Docker, Postman, Linux, Maven}
+
+\end{itemize}
+
+% =========================================================
+% EXPERIENCE
+% =========================================================
+
+\section{EXPERIENCE}
+
+\begin{itemize}[leftmargin=0pt]
+
+\resumeSubheading
+{AI-ML Virtual Internship}
+{April -- June 2025}
+{AICTE -- EduSkills, supported by Google for Developers (India Edu Program)}
+{Remote}
+
+\begin{itemize}
+
+% Dates match the certificate exactly (April-June 2025 cohort).
+% Curriculum reconstructed from the Google Developer Program skill badges
+% earned 1-18 June 2025, so every item below is publicly verifiable.
+\resumeItem{
+Completed the 10-week AICTE--EduSkills AI-ML virtual internship, supported by Google for Developers, for fifth-semester internship credit.
+}
+
+\resumeItem{
+Covered TensorFlow, image classification, object detection and product image search through Google Developers ML pathways, earning a skill badge for each.
+}
+
+\end{itemize}
+
+\end{itemize}
+
+% =========================================================
+% PROJECTS
+% =========================================================
+
+\section{PROJECTS}
+
+\begin{itemize}[leftmargin=0pt]
+
+% ---------------------------------------------------------
+% PROJECT: Supply Chain Dispute Ledger
+% ---------------------------------------------------------
+
+\resumeProjectHeading
+{Supply Chain Dispute Ledger}
+{https://github.com/Krish3101/dispute-ledger}
+{Hyperledger Fabric, Node.js, Express, gRPC, JWT}
+
+\begin{itemize}
+
+\resumeItem{
+Built a dispute resolution system on Hyperledger Fabric: supply chain partners raise disputes and attach evidence, arbiters resolve them, and every action is timestamped on an append-only ledger.
+}
+
+\resumeItem{
+Enforced role-based access control on-chain in the chaincode rather than at the API edge, so a compromised gateway cannot bypass authorization.
+}
+
+\resumeItem{
+Wrote an Express REST gateway that talks to the Fabric Gateway over gRPC/TLS, secured with JWT, Helmet and rate limiting.
+}
+
+\end{itemize}
+
+% ---------------------------------------------------------
+% PROJECT 1: GeoAgent
+% ---------------------------------------------------------
+
+\resumeProjectHeading
+{GeoAgent: Geospatial Microservices Platform}
+{https://github.com/Krish3101/geo-agents}
+{FastAPI, GeoPandas, Shapely, Redis, Docker}
+
+\begin{itemize}
+
+\resumeItem{
+Split the platform into two FastAPI microservices: a Vector Agent for boundary geocoding and a Raster Agent for satellite imagery clipping.
+}
+
+\resumeItem{
+Added WebSocket log streaming and geometry repair for malformed coordinates and invalid polygons.
+}
+
+\resumeItem{
+Integrated Gemma for natural-language spatial queries; deployed the services with Docker Compose.
+}
+
+\end{itemize}
+
+% ---------------------------------------------------------
+% PROJECT 2: Smart Traffic System
+% ---------------------------------------------------------
+
+\resumeProjectHeading
+{Traffic Violation Management System}
+{https://github.com/Krish3101/traffic-rule-engine}
+{Java, Spring Boot, JPA, PostgreSQL, Docker}
+
+\begin{itemize}
+
+\resumeItem{
+Built a rule engine in Java and Spring Boot that evaluates speed events against configurable thresholds and calculates tiered fines, exempting emergency vehicles before any penalty applies.
+}
+
+\resumeItem{
+Designed the REST API and a Thymeleaf dashboard over PostgreSQL, with H2 for local runs.
+}
+
+\resumeItem{
+Tested the engine with JUnit 5 unit tests and MockMvc integration tests, and validated request payloads with Jakarta Bean Validation.
+}
+
+\end{itemize}
+
+\end{itemize}
+
+% =========================================================
+% CERTIFICATIONS
+% =========================================================
+
+\section{CERTIFICATIONS}
+
+\begin{itemize}[leftmargin=0pt]
+
+\item[]\small{\textbf{Java Programming: Solving Problems with Software} -- Duke University, Coursera}
+\vspace{1.5pt}
+\item[]\small{\textbf{Data Structures} -- University of California San Diego, Coursera}
+\vspace{1.5pt}
+\item[]\small{\textbf{Advanced Java} -- LearnKartS, Coursera}
+\vspace{1.5pt}
+\item[]\small{\textbf{Neural Networks and Deep Learning} -- DeepLearning.AI, Coursera}
+
+\end{itemize}
+
+\end{document}
