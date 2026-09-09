@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krishkumar Kalya — Software Engineer</title>
+<meta name="description" content="Krishkumar Kalya — software engineer building backend systems, distributed ledgers, geospatial data pipelines and AI tooling. Java, Python, Spring Boot, FastAPI, PostGIS, Docker.">
+<meta name="author" content="Krishkumar Kalya">
+<link rel="canonical" href="https://krish3101.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Krishkumar Kalya — Software Engineer">
+<meta property="og:description" content="Backend systems, distributed ledgers, geospatial pipelines and AI tooling.">
+<meta property="og:url" content="https://krish3101.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='system-ui'>&#9670;</text></svg>">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  /* set theme before first paint to avoid a flash of the wrong palette */
+  (function () {
+    var t; try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__brand" href="#top"><span class="nav__mark">◆</span> Krish Kalya</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="icon-btn" type="button" aria-label="Toggle colour theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 2.6v2.4M12 19v2.4M4.2 12H1.8M22.2 12h-2.4M5.9 5.9 4.2 4.2M19.8 19.8l-1.7-1.7M18.1 5.9l1.7-1.7M4.2 19.8l1.7-1.7"/></g></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.4A8.5 8.5 0 1 1 9.6 4a6.8 6.8 0 0 0 10.4 10.4Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <p class="hero__eyebrow">Available for SDE roles &middot; 2026</p>
+      <h1 class="hero__name">Krishkumar Kalya</h1>
+      <p class="hero__role">Software Engineer — Backend &amp; Distributed Systems</p>
+      <p class="hero__blurb">
+        I build systems that behave predictably under load: deterministic rule engines in
+        Spring Boot, append-only ledgers on Hyperledger Fabric, geospatial ingestion pipelines
+        that push the maths down into PostGIS, and LLM agents constrained by typed contracts.
+        Currently in my final year of B.E. Computer Engineering.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" id="link-resume" href="assets/Krishkumar-Kalya-Resume.pdf" hidden>Resume (PDF)</a>
+        <a class="btn" href="https://github.com/Krish3101" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" id="link-linkedin" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a>
+        <a class="btn" href="mailto:krishkalya31012005@gmail.com">Email</a>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>Repositories shipped</dt><dd>9</dd></div>
+        <div><dt>Primary stacks</dt><dd>Java · Python · Node</dd></div>
+        <div><dt>Focus</dt><dd>Backend · Data · AI</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="wrap">
+      <header class="section__head">
+        <h2>Selected Projects</h2>
+        <p>Nine production-shaped repositories. Every one has tests, a README, and a reproducible run path.</p>
+      </header>
+      <div class="filters" role="group" aria-label="Filter projects by domain">
+        <button class="chip is-active" data-filter="all" type="button">All</button>
+        <button class="chip" data-filter="systems" type="button">Backend &amp; Systems</button>
+        <button class="chip" data-filter="ai" type="button">AI &amp; Data</button>
+        <button class="chip" data-filter="fullstack" type="button">Full-Stack</button>
+      </div>
+      <div class="grid" id="project-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="skills">
+    <div class="wrap">
+      <header class="section__head">
+        <h2>Technical Skills</h2>
+        <p>Grouped by what I actually reach for, not by what I have once read about.</p>
+      </header>
+      <div class="skills" id="skills-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About</h2>
+        <p>
+          I am a final-year Computer Engineering student who prefers systems whose behaviour you
+          can reason about on paper. Most of my work sits behind the API line: rule engines,
+          ledgers, ingestion pipelines, and the schemas that keep them honest.
+        </p>
+        <p>
+          My habit across every repository here is the same — write the deterministic core
+          first, put it under test, and only then attach the transport, the UI, or the model.
+          It is why the AI projects fall back gracefully when a key is missing and why the
+          geospatial pipeline does its maths in PostGIS rather than in Python.
+        </p>
+      </div>
+      <aside class="card card--edu">
+        <h3>Education</h3>
+        <p class="edu__degree">B.E. Computer Engineering</p>
+        <p class="edu__meta">Final year &middot; Expected 2026</p>
+        <h4>Relevant coursework</h4>
+        <ul class="edu__list">
+          <li>Data Structures &amp; Algorithms</li>
+          <li>Operating Systems</li>
+          <li>Database Management Systems</li>
+          <li>Computer Networks</li>
+          <li>System Programming &amp; Compiler Construction</li>
+          <li>Software Engineering</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="contact">
+    <div class="wrap contact">
+      <h2>Get in touch</h2>
+      <p>Open to software engineering roles and internships. The fastest route is email.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="mailto:krishkalya31012005@gmail.com">krishkalya31012005@gmail.com</a>
+        <a class="btn" href="https://github.com/Krish3101" target="_blank" rel="noopener">github.com/Krish3101</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p>&copy; <span id="year"></span> Krishkumar Kalya</p>
+    <p>Built with plain HTML, CSS and JavaScript. No framework, no build step.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
