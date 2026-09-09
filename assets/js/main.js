@@ -53,7 +53,7 @@ const PROJECTS = [
     repo: 'kisan-crop-risk',
     kind: 'Rules Engine',
     cats: ['ai', 'fullstack'],
-    desc: 'Crop risk scoring that reads a plot’s crop and growth stage against a five-day forecast through deterministic agronomic rules — same forecast in, same assessment out.',
+    desc: 'Crop risk scoring that grades a plot’s crop and growth stage against a five-day forecast with deterministic agronomic rules, then has an LLM turn the score into plain language — falling back to a canned explanation when the model is unreachable.',
     tags: ['FastAPI', 'React 19', 'SQLAlchemy', 'JWT'],
     live: null
   },
@@ -63,15 +63,15 @@ const PROJECTS = [
     kind: 'Systems Programming',
     cats: ['systems'],
     desc: 'A two-pass macroprocessor for a custom macro language, with a PyQt6 GUI that shows the MNT, MDT and ALA filling up as the expansion runs.',
-    tags: ['Python', 'PyQt6', 'Compilers', 'Pytest'],
+    tags: ['Python', 'PyQt6', 'Compilers', 'unittest'],
     live: null
   },
   {
     name: 'Recipe Finder',
     repo: 'recipe-finder',
-    kind: 'Full-Stack ML',
-    cats: ['fullstack', 'ai'],
-    desc: 'Pantry-based recipe matching that ranks every stored recipe by ingredient similarity using CountVectorizer and cosine distance, returning a percentage score per match.',
+    kind: 'Full-Stack',
+    cats: ['fullstack'],
+    desc: 'Pantry-based recipe matching that scores ingredient overlap with CountVectorizer and cosine distance — a bag-of-words comparison, not a trained model, so the same pantry always ranks the same way.',
     tags: ['FastAPI', 'scikit-learn', 'React 19', 'Vite'],
     live: null
   },
