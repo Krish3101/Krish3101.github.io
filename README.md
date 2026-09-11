@@ -1,34 +1,34 @@
 # krish3101.github.io
 
-Personal portfolio for **Krishkumar Kalya** — served as a static site from GitHub Pages at
-<https://krish3101.github.io>.
+My portfolio, served as a static site from GitHub Pages at <https://krish3101.github.io>.
 
-## Stack
-
-Plain HTML, CSS and JavaScript. No framework, no build step, no dependencies — the browser
-gets exactly the three files in this repo, which is why it loads instantly from a cold link.
+Plain HTML and CSS. There is no framework and no build step, so what is in the repo is exactly
+what the browser gets.
 
 ```
-index.html            markup and content sections
-assets/css/styles.css design tokens, layout, light/dark themes
-assets/js/main.js     project + skill data, filtering, theme toggle
-assets/og-card.png    1200x630 social preview image (og:image)
-resume/               resume.tex source and the compiled PDF
-.nojekyll             tell Pages to serve files as-is
+index.html               every word on the page, including the five project entries
+assets/css/styles.css    the whole stylesheet
+assets/js/main.js        one line, to keep the footer year current
+assets/og-card.png       1200x630 link preview image, drawn by the script below
+scripts/make-og-card.py  draws that image
+resume/                  the LaTeX source and the PDF built from it
+.nojekyll                stops Pages running the files through Jekyll
 ```
 
-## Editing content
+## Editing
 
-All project and skill content lives in the `PROJECTS` and `SKILLS` arrays at the top of
-`assets/js/main.js`; the DOM is generated from them. To add a project, append an object with
-`name`, `repo`, `kind`, `cats`, `desc`, `tags` and `live`.
+Project entries are written directly in `index.html` rather than generated from a data file.
+Each one is an `<article class="entry">` wrapping a `<details>`: the `<summary>` holds the
+number, name, one-line description and stack, and the block after it holds the four labelled
+rows and the source link. Copy an existing entry and change the text.
 
-Cards deliberately carry one sentence each — the detail belongs in the repository README,
-which the card title and **Source** link both point at. `cats` drives the filter chips and
-accepts any of `systems`, `ai`, `fullstack`.
+They are plain HTML on purpose. The expanded detail is a native `<details>` element, so it
+opens and closes, takes keyboard focus and reads correctly in a screen reader without any
+JavaScript — and the page still shows everything if a script fails to load.
 
-Set `live` to a deployment URL (e.g. a Render service) to make a **Live demo** button appear
-on that card. Leave it `null` while a project has no public deployment.
+Keep the descriptions true to what the code does. An earlier version of this site claimed
+Hyperledger Fabric, scikit-learn and MySQL in projects that use none of them, which is worse
+than saying nothing at all.
 
 ## Local preview
 
@@ -41,11 +41,23 @@ Then open <http://localhost:8000>.
 ## Rebuilding the resume
 
 ```bash
-tectonic -X compile resume/resume.tex --outdir resume
+tectonic -X compile resume/Krishkumar-Kalya-Resume.tex --outdir resume
 ```
+
+The source is named to match the PDF on purpose. It used to be `resume.tex`, which built a
+`resume.pdf` that nothing linked to, so the published PDF quietly went a version stale.
+
+## Redrawing the link preview
+
+```bash
+python3 scripts/make-og-card.py
+```
+
+It needs Pillow. The card is drawn in Georgia, which is what the stylesheet falls back to
+before Instrument Serif loads, so the image and the page agree.
 
 ## Deploying
 
-Pushing to `main` publishes automatically — a repository named `<user>.github.io` is served
-from the branch root. Confirm under **Settings → Pages** that the source is
-*Deploy from a branch → `main` → `/ (root)`*.
+Pushing to `main` publishes it — a repository named `<user>.github.io` is served from the
+branch root. Under Settings → Pages the source should be *Deploy from a branch → `main` →
+`/ (root)`*.

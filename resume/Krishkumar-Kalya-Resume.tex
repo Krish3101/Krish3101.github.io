@@ -106,14 +106,12 @@
 {\LARGE\bfseries\color{darkblue} KRISHKUMAR KALYA}\\[2.5pt]
 
 \small
-\faPhone\ +91-95189-73317
-\quad $|$ \quad
 \faEnvelope\ \href{mailto:krishkalya31012005@gmail.com}{krishkalya31012005@gmail.com}
 \quad $|$ \quad
 \faMapMarker\ Pune, Maharashtra
 \\[1.5pt]
 
-\faLinkedin\ \href{https://www.linkedin.com/in/krishkumar-kalya-b05b941b3/}{linkedin.com/in/krishkumar-kalya}
+\faLinkedin\ \href{https://www.linkedin.com/in/krishkumar-kalya}{linkedin.com/in/krishkumar-kalya}
 \quad $|$ \quad
 \faGithub\ \href{https://github.com/Krish3101}{github.com/Krish3101}
 \quad $|$ \quad
@@ -150,11 +148,11 @@
 
 \begin{itemize}[leftmargin=0pt]
 
-\item[]\small{\textbf{Languages:} Python, Java, SQL, JavaScript}
+\item[]\small{\textbf{Languages:} Python, Java, SQL, JavaScript, TypeScript}
 \vspace{1.5pt}
-\item[]\small{\textbf{Databases:} PostgreSQL, PostGIS, MySQL, Redis}
+\item[]\small{\textbf{Databases:} PostgreSQL, PostGIS, SQLite, SQLAlchemy}
 \vspace{1.5pt}
-\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Flask, Spring Data JPA, Scikit-learn}
+\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Flask, Express, Spring Data JPA, GeoPandas}
 \vspace{1.5pt}
 \item[]\small{\textbf{Tools \& Platforms:} Git, GitHub, Docker, Postman, Linux, Maven}
 
@@ -199,39 +197,31 @@ Covered TensorFlow, image classification, object detection and product image sea
 
 \begin{itemize}[leftmargin=0pt]
 
-% ---------------------------------------------------------
-% PROJECT: Supply Chain Dispute Ledger
-% ---------------------------------------------------------
-
 \resumeProjectHeading
-{Supply Chain Dispute Ledger}
-{https://github.com/Krish3101/dispute-ledger}
-{Hyperledger Fabric, Node.js, Express, gRPC, JWT}
+{disputeledger}
+{https://github.com/Krish3101/disputeledger}
+{TypeScript, Express, better-sqlite3, Zod}
 
 \begin{itemize}
 
 \resumeItem{
-Built a dispute resolution system on Hyperledger Fabric: supply chain partners raise disputes and attach evidence, arbiters resolve them, and every action is timestamped on an append-only ledger.
+Built a dispute tracking system for supply chain partners: disputes are raised with evidence attached, arbiters resolve them, and every action is recorded on an append-only event log.
 }
 
 \resumeItem{
-Enforced role-based access control on-chain in the chaincode rather than at the API edge, so a compromised gateway cannot bypass authorization.
+Made the log tamper-evident by chaining events with SHA-256 --- each event stores the previous event's hash, so verification recomputes the chain and a row edited directly in the database breaks the link instead of passing unnoticed.
 }
 
 \resumeItem{
-Wrote an Express REST gateway that talks to the Fabric Gateway over gRPC/TLS, secured with JWT, Helmet and rate limiting.
+Kept the dispute rules in a pure domain module with no I/O so they are testable on their own; authentication uses scrypt-hashed passwords and server-side session tokens. Tested with Vitest and supertest.
 }
 
 \end{itemize}
 
-% ---------------------------------------------------------
-% PROJECT 1: GeoAgent
-% ---------------------------------------------------------
-
 \resumeProjectHeading
-{GeoAgent: Geospatial LLM Assistant}
-{https://github.com/Krish3101/geo-agents}
-{Pydantic-AI, FastAPI, GeoPandas, Redis, Docker}
+{geoagent}
+{https://github.com/Krish3101/geoagent}
+{pydantic-ai, FastAPI, GeoPandas, OSMnx, SQLite}
 
 \begin{itemize}
 
@@ -240,23 +230,19 @@ Built a single async FastAPI service that maps Python geospatial functions into 
 }
 
 \resumeItem{
-Implemented the spatial toolset over OpenStreetMap boundaries and Planetary Computer Sentinel-2 imagery, with geometry repair for malformed coordinates and invalid polygons.
+Implemented the spatial toolset over OpenStreetMap boundaries and Planetary Computer Sentinel-2 imagery, returning GeoJSON, GeoPackage and GeoTIFF files, with geocoding throttled to one request per second to respect the Nominatim usage policy.
 }
 
 \resumeItem{
-Streamed task logs over WebSockets from a Redis-backed state manager that replays missed updates to late-connecting clients; served Gemma via Docker Compose.
+Constrained the model to tool selection only: coordinates and output paths stay in the run context and never appear in model output, so every geometry calculation is done by Python. Task progress streams to the browser over server-sent events.
 }
 
 \end{itemize}
 
-% ---------------------------------------------------------
-% PROJECT 2: Smart Traffic System
-% ---------------------------------------------------------
-
 \resumeProjectHeading
-{Traffic Violation Management System}
-{https://github.com/Krish3101/traffic-rule-engine}
-{Java, Spring Boot, JPA, PostgreSQL, Docker}
+{trafficengine}
+{https://github.com/Krish3101/trafficengine}
+{Java 21, Spring Boot 3.4, Spring Data JPA, H2}
 
 \begin{itemize}
 
@@ -265,7 +251,7 @@ Built a rule engine in Java and Spring Boot that evaluates speed events against 
 }
 
 \resumeItem{
-Designed the REST API and a Thymeleaf dashboard over PostgreSQL, with H2 for local runs.
+Kept the rule engine as plain Java with no Spring and no database in it, so the rules are unit-testable without starting either; speed limits and fine tiers are configured in \texttt{application.yml} rather than compiled into the code.
 }
 
 \resumeItem{
