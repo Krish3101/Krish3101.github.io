@@ -1,0 +1,294 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.52in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{setspace}
+
+% ---------------------------------------------------------
+% COLORS
+% ---------------------------------------------------------
+\definecolor{darkblue}{RGB}{0,51,102}
+
+% ---------------------------------------------------------
+% HYPERLINK SETUP
+% ---------------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    urlcolor=darkblue,
+    pdfborder={0 0 0}
+}
+
+% ---------------------------------------------------------
+% SECTION FORMATTING
+% ---------------------------------------------------------
+\titleformat{\section}
+    {\large\bfseries\color{darkblue}}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+% ---------------------------------------------------------
+% CUSTOM COMMANDS
+% ---------------------------------------------------------
+
+% Education / Experience heading
+\newcommand{\resumeSubheading}[4]{%
+    \item[]
+    \noindent
+    \textbf{#1}\hfill\textit{#2}\\
+    \textit{\small #3}\hfill\small #4
+    \par\vspace{0.8pt}
+}
+
+% Project heading (Inline format: Name | GitHub | Tech Stack)
+\newcommand{\resumeProjectHeading}[3]{%
+    \item[]
+    \noindent
+    \textbf{#1} \ $|$ \ \href{#2}{\small\faGithub\ GitHub} \ $|$ \ \textit{\small #3}
+    \par\vspace{0.8pt}
+}
+
+\newcommand{\resumeItem}[1]{%
+    \item\small #1
+}
+
+% ---------------------------------------------------------
+% LIST SETTINGS
+% ---------------------------------------------------------
+\setlist[itemize]{
+    leftmargin=12pt,
+    itemsep=2.5pt,
+    parsep=0pt,
+    topsep=1pt
+}
+
+\setlist[itemize,2]{
+    leftmargin=12pt,
+    itemsep=0.8pt,
+    parsep=0pt,
+    topsep=0.8pt
+}
+
+% ---------------------------------------------------------
+% LINE SPACING
+% ---------------------------------------------------------
+\setstretch{1.03}
+
+% ---------------------------------------------------------
+% REMOVE PAGE NUMBERS
+% ---------------------------------------------------------
+\pagestyle{empty}
+
+% =========================================================
+% DOCUMENT
+% =========================================================
+\begin{document}
+
+% =========================================================
+% HEADER
+% =========================================================
+
+\begin{center}
+
+{\LARGE\bfseries\color{darkblue} KRISHKUMAR KALYA}\\[2.5pt]
+
+\small
+\faEnvelope\ \href{mailto:krishkalya31012005@gmail.com}{krishkalya31012005@gmail.com}
+\quad $|$ \quad
+\faMapMarker\ Pune, Maharashtra
+\\[1.5pt]
+
+\faLinkedin\ \href{https://www.linkedin.com/in/krishkumar-kalya}{linkedin.com/in/krishkumar-kalya}
+\quad $|$ \quad
+\faGithub\ \href{https://github.com/Krish3101}{github.com/Krish3101}
+\quad $|$ \quad
+\faGlobe\ \href{https://krish3101.github.io}{krish3101.github.io}
+
+\end{center}
+
+\vspace{-4pt}
+
+% =========================================================
+% SUMMARY
+% =========================================================
+
+\section{SUMMARY}
+
+\begin{itemize}[leftmargin=0pt]
+
+\item[]\small{I build web services end to end --- the database schema, the API, and the interface on top --- mostly in Java, Python and TypeScript. I want to keep doing that on software people actually use.}
+
+\end{itemize}
+
+% =========================================================
+% EDUCATION
+% =========================================================
+
+\section{EDUCATION}
+
+\begin{itemize}[leftmargin=0pt]
+
+\resumeSubheading
+{MIT ADT University}
+{Pune, India}
+{Bachelor of Technology in Computer Science and Engineering \textbar\ \textbf{CGPA: 8.68}}
+{Expected May 2027}
+
+\vspace{2pt}
+\item[]\small{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Management Systems, Operating Systems, Computer Networks}
+
+\end{itemize}
+
+% =========================================================
+% TECHNICAL SKILLS
+% =========================================================
+
+\section{TECHNICAL SKILLS}
+
+\begin{itemize}[leftmargin=0pt]
+
+\item[]\small{\textbf{Languages:} Python, Java, SQL, JavaScript, TypeScript}
+\vspace{1.5pt}
+\item[]\small{\textbf{Databases:} PostgreSQL, PostGIS, SQLite}
+\vspace{1.5pt}
+\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Express, SQLAlchemy, React, Vite, Tailwind CSS}
+\vspace{1.5pt}
+\item[]\small{\textbf{Tools \& Platforms:} Git, Docker, Maven, Postman, Linux}
+
+\end{itemize}
+
+% =========================================================
+% EXPERIENCE
+% =========================================================
+
+\section{EXPERIENCE}
+
+\begin{itemize}[leftmargin=0pt]
+
+\resumeSubheading
+{AI-ML Virtual Internship}
+{April -- June 2025}
+{AICTE -- EduSkills, supported by Google for Developers (India Edu Program)}
+{Remote}
+
+\begin{itemize}
+
+% Dates match the certificate exactly (April-June 2025 cohort).
+% Curriculum reconstructed from the Google Developer Program skill badges
+% earned 1-18 June 2025, so every item below is publicly verifiable.
+\resumeItem{
+Completed the 10-week AICTE--EduSkills AI-ML virtual internship, supported by Google for Developers.
+}
+
+\resumeItem{
+Covered TensorFlow, image classification, object detection and product image search through Google Developers ML pathways.
+}
+
+\end{itemize}
+
+\end{itemize}
+
+% =========================================================
+% PROJECTS
+% =========================================================
+
+\section{PROJECTS}
+
+\begin{itemize}[leftmargin=0pt]
+
+\resumeProjectHeading
+{disputeledger}
+{https://github.com/Krish3101/disputeledger}
+{TypeScript, Express, better-sqlite3, Zod}
+
+\begin{itemize}
+
+\resumeItem{
+Built a dispute tracking system for supply chain partners: disputes are raised with evidence attached, arbiters resolve them, and every action is recorded on an append-only event log.
+}
+
+\resumeItem{
+Made the log tamper-evident by chaining events with SHA-256 --- each event stores the previous event's hash, so verification recomputes the chain and a row edited directly in the database breaks the link instead of passing unnoticed.
+}
+
+\resumeItem{
+Kept the dispute rules in a pure domain module with no I/O so they are testable on their own; authentication uses scrypt-hashed passwords and server-side session tokens. Tested with Vitest and supertest.
+}
+
+\end{itemize}
+
+\resumeProjectHeading
+{geoagent}
+{https://github.com/Krish3101/geoagent}
+{pydantic-ai, FastAPI, GeoPandas, OSMnx, SQLite}
+
+\begin{itemize}
+
+\resumeItem{
+Built a single async FastAPI service that maps Python geospatial functions into LLM tools through Pydantic-AI, so every model-issued call is validated against a typed contract instead of a hand-rolled planner loop.
+}
+
+\resumeItem{
+Implemented the spatial toolset over OpenStreetMap boundaries and Planetary Computer Sentinel-2 imagery, returning GeoJSON, GeoPackage and GeoTIFF files.
+}
+
+\resumeItem{
+Constrained the model to tool selection only: coordinates and output paths stay in the run context and never appear in model output, so every geometry calculation is done by Python. Task progress streams to the browser over server-sent events.
+}
+
+\end{itemize}
+
+% {} breaks the ffi ligature, which a PDF text extractor reads as U+FB03 and not as "ffi".
+\resumeProjectHeading
+{traf\hspace{0.01pt}f\hspace{0.01pt}icengine}
+{https://github.com/Krish3101/trafficengine}
+{Java 21, Spring Boot 3.4, Spring Data JPA, H2}
+
+\begin{itemize}
+
+\resumeItem{
+Built a rule engine in Java and Spring Boot that evaluates speed events against configurable thresholds and calculates tiered fines, exempting emergency vehicles before any penalty applies.
+}
+
+\resumeItem{
+Kept the rule engine as plain Java with no Spring and no database in it, so the rules are unit-testable without starting either; speed limits and fine tiers are configured in \texttt{application.yml} rather than compiled into the code.
+}
+
+\resumeItem{
+Tested the engine with JUnit 5 unit tests and MockMvc integration tests, and validated request payloads with Jakarta Bean Validation.
+}
+
+\end{itemize}
+
+\end{itemize}
+
+% =========================================================
+% CERTIFICATIONS
+% =========================================================
+
+\section{CERTIFICATIONS}
+
+\begin{itemize}[leftmargin=0pt]
+
+\item[]\small{\textbf{Java Programming: Solving Problems with Software} -- Duke University, Coursera}
+\vspace{1.5pt}
+\item[]\small{\textbf{Data Structures} -- University of California San Diego, Coursera}
+\vspace{1.5pt}
+\item[]\small{\textbf{Neural Networks and Deep Learning} -- DeepLearning.AI, Coursera}
+
+\end{itemize}
+
+\end{document}
