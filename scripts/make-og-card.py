@@ -45,12 +45,12 @@ def main() -> None:
     draw.text((MARGIN, 152), "Krishkumar Kalya", font=font("Georgia.ttf", 82), fill=INK)
 
     statement = font("Georgia Italic.ttf", 36)
-    draw.text((MARGIN, 274), "I build systems whose behaviour", font=statement, fill=INK_SOFT)
-    draw.text((MARGIN, 326), "you can predict from the code.", font=statement, fill=INK_SOFT)
+    draw.text((MARGIN, 274), "I build things and put them online.", font=statement, fill=INK_SOFT)
+    draw.text((MARGIN, 326), "Across the stack, and I keep it simple.", font=statement, fill=INK_SOFT)
 
     draw.line([(MARGIN, 452), (WIDTH - MARGIN, 452)], fill=RULE, width=1)
 
-    stack = "Java  ·  Spring Boot  ·  Python  ·  FastAPI  ·  PostGIS  ·  TypeScript"
+    stack = "Java  ·  Spring Boot  ·  Python  ·  FastAPI  ·  TypeScript  ·  React  ·  PostGIS"
     draw.text((MARGIN, 486), stack, font=font("Georgia.ttf", 25), fill=MUTED)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

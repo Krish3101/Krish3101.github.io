@@ -4,12 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krishkumar Kalya</title>
-<meta name="description" content="Krishkumar Kalya — computer science student at MIT ADT University, Pune. Backend systems: rule engines, geospatial pipelines, audit trails and LLM tooling in Java, Python, Spring Boot, FastAPI and PostGIS.">
+<meta name="description" content="Krishkumar Kalya — developer in Pune. Full-stack projects in Java, Python, TypeScript, Spring Boot, FastAPI, React and PostGIS.">
 <meta name="author" content="Krishkumar Kalya">
 <link rel="canonical" href="https://krish3101.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23faf8f4%22%2F%3E%3Crect%20width%3D%223%22%20height%3D%2232%22%20fill%3D%22%23a03e2a%22%2F%3E%3Ctext%20x%3D%2219%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2222%22%20fill%3D%22%231f1c17%22%3EK%3C%2Ftext%3E%3C%2Fsvg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Krishkumar Kalya">
-<meta property="og:description" content="Backend systems: rule engines, geospatial pipelines, audit trails and LLM tooling.">
+<meta property="og:description" content="A developer working across the stack. Projects in Java, Python, TypeScript, React and PostGIS.">
 <meta property="og:url" content="https://krish3101.github.io/">
 <meta property="og:image" content="https://krish3101.github.io/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,7 +24,10 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Krishkumar Kalya",
+  "jobTitle": "Software Developer",
   "url": "https://krish3101.github.io/",
+  "image": "https://krish3101.github.io/assets/og-card.png",
+  "knowsAbout": ["Java", "Python", "TypeScript", "Spring Boot", "FastAPI", "React", "PostgreSQL", "PostGIS"],
   "email": "krishkalya31012005@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "MIT ADT University, Pune" },
@@ -52,13 +56,11 @@
 
   <section class="opening">
     <div class="shell">
-      <h1 class="opening__statement">I build systems whose behaviour you can predict from the code.</h1>
+      <h1 class="opening__statement">I&rsquo;m Krishkumar Kalya. I build things and put them online.</h1>
       <p class="opening__body">
-        Computer science student at MIT ADT University, Pune. Most of my work sits behind the
-        API line &mdash; rule engines, ingestion pipelines, audit trails, and the schemas that
-        keep them honest. The habit is the same in every project here: write the deterministic
-        core first, put it under test, and only then attach the transport, the interface, or
-        the model.
+        I work across the stack &mdash; APIs and the databases under them, and the interfaces
+        on top. I like trying new tools, and I like what comes out of it being simple and good
+        to look at. My projects are below.
       </p>
       <p class="opening__links">
         <a href="mailto:krishkalya31012005@gmail.com">krishkalya31012005@gmail.com</a>
@@ -72,8 +74,7 @@
   <section class="section" id="work">
     <div class="shell">
       <div class="section__head">
-        <h2>Selected work</h2>
-        <p class="section__note">Five projects. Each one runs from a clone.</p>
+        <h2>Work</h2>
       </div>
 
       <article class="entry">
@@ -86,17 +87,41 @@
             <span class="entry__cue"></span>
           </summary>
           <div class="detail">
+            <figure class="figure">
+              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-geoagent">
+                <title id="dg-geoagent">How geoagent answers a request</title>
+                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
+                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
+                <text class="dg-t" x="80" y="30">Plain-language</text>
+                <text class="dg-t" x="80" y="48">ask</text>
+                <rect class="dg-box" x="184" y="6" width="152" height="58"/>
+                <text class="dg-t" x="260" y="30">Model</text>
+                <text class="dg-t" x="260" y="48">picks a tool</text>
+                <rect class="dg-box dg-box--core" x="364" y="6" width="152" height="58"/>
+                <text class="dg-t dg-t--core" x="440" y="30">Python</text>
+                <text class="dg-t dg-t--core" x="440" y="48">GeoPandas &middot; OSMnx</text>
+                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
+                <text class="dg-t" x="620" y="30">GeoJSON</text>
+                <text class="dg-t" x="620" y="48">GPKG &middot; GeoTIFF</text>
+              </svg>
+              <figcaption>The model only ever selects. Coordinates and file paths live in the run context, never in its output, so every calculation happens in Python.</figcaption>
+            </figure>
             <dl class="detail__rows">
               <dt>The problem</dt>
               <dd>A language model is fluent enough to invent a plausible bounding box, and downstream a wrong coordinate looks exactly like a right one.</dd>
               <dt>The decision</dt>
-              <dd>The model chooses which tool to call and nothing else. Coordinates and file paths live in the run context, never in the model&rsquo;s output, so every calculation happens in Python and the model only ever selects.</dd>
+              <dd>The model chooses which tool to call and nothing else. Coordinates and file paths live in the run context, never in the model&rsquo;s output.</dd>
               <dt>Stack</dt>
-              <dd>pydantic-ai, FastAPI, GeoPandas, OSMnx and SQLite. Boundaries come from OpenStreetMap and imagery from Planetary Computer Sentinel-2; progress streams back over server-sent events. Geocoding is throttled to one request a second to stay inside the Nominatim usage policy.</dd>
-              <dt>Running it</dt>
-              <dd><code>./scripts/start.sh</code> on port 8000. Tests are <code>uv run pytest -q</code>; the ones that need network are deselected unless you pass <code>-m network</code>.</dd>
+              <dd>pydantic-ai, FastAPI, GeoPandas, OSMnx and SQLite. Boundaries from OpenStreetMap, imagery from Planetary Computer Sentinel-2.</dd>
             </dl>
-            <p class="detail__link"><a href="https://github.com/Krish3101/geoagent" target="_blank" rel="noopener">Source on GitHub</a></p>
+            <p class="detail__links">
+              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
+              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
+              -->
+              <a href="https://github.com/Krish3101/geoagent" target="_blank" rel="noopener">Source on GitHub</a>
+            </p>
           </div>
         </details>
       </article>
@@ -111,17 +136,41 @@
             <span class="entry__cue"></span>
           </summary>
           <div class="detail">
+            <figure class="figure">
+              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-farmland">
+                <title id="dg-farmland">How farmland turns spreadsheet rows into served geometry</title>
+                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
+                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
+                <text class="dg-t" x="80" y="30">Spreadsheet</text>
+                <text class="dg-t" x="80" y="48">rows</text>
+                <rect class="dg-box dg-box--core" x="184" y="6" width="152" height="58"/>
+                <text class="dg-t dg-t--core" x="260" y="30">PostGIS refresh</text>
+                <text class="dg-t dg-t--core" x="260" y="48">clean &amp; validate</text>
+                <rect class="dg-box" x="364" y="6" width="152" height="58"/>
+                <text class="dg-t" x="440" y="30">Materialised view</text>
+                <text class="dg-t" x="440" y="48">indexed geometry</text>
+                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
+                <text class="dg-t" x="620" y="30">FastAPI read</text>
+                <text class="dg-t" x="620" y="48">RFC 7946 GeoJSON</text>
+              </svg>
+              <figcaption>Cleaning happens once, when the view refreshes. A request is then an indexed lookup on geometry that has already been validated.</figcaption>
+            </figure>
             <dl class="detail__rows">
               <dt>The problem</dt>
               <dd>Field boundaries arrive as spreadsheet text: inconsistent coordinate order, malformed polygons, duplicate vertices. Cleaning all of that on every read would make every read slow.</dd>
               <dt>The decision</dt>
-              <dd>The cleaning happens in PostGIS when the materialised view refreshes, not when a request arrives. A read is then an indexed lookup on geometry that has already been validated.</dd>
+              <dd>The cleaning happens in PostGIS when the materialised view refreshes, not when a request arrives.</dd>
               <dt>Stack</dt>
               <dd>FastAPI, SQLAlchemy, asyncpg and Pydantic over PostGIS, brought up with Docker Compose. Requests authenticate with an <code>X-API-Key</code> header.</dd>
-              <dt>Running it</dt>
-              <dd><code>./scripts/start.sh</code> on port 8000 &mdash; it starts Postgres and ingests the sample data. <code>./scripts/reset.sh</code> tears the volume back down. Tests are <code>uv run pytest</code>, and the Postgres ones skip rather than fail without a live database.</dd>
             </dl>
-            <p class="detail__link"><a href="https://github.com/Krish3101/farmland" target="_blank" rel="noopener">Source on GitHub</a></p>
+            <p class="detail__links">
+              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
+              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
+              -->
+              <a href="https://github.com/Krish3101/farmland" target="_blank" rel="noopener">Source on GitHub</a>
+            </p>
           </div>
         </details>
       </article>
@@ -136,17 +185,41 @@
             <span class="entry__cue"></span>
           </summary>
           <div class="detail">
+            <figure class="figure">
+              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-trafficengine">
+                <title id="dg-trafficengine">How trafficengine decides a violation</title>
+                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
+                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
+                <text class="dg-t" x="80" y="30">Speed reading</text>
+                <text class="dg-t" x="80" y="48">in</text>
+                <rect class="dg-box" x="184" y="6" width="152" height="58"/>
+                <text class="dg-t" x="260" y="30">Spring Boot</text>
+                <text class="dg-t" x="260" y="48">controller</text>
+                <rect class="dg-box dg-box--core" x="364" y="6" width="152" height="58"/>
+                <text class="dg-t dg-t--core" x="440" y="30">Rule engine</text>
+                <text class="dg-t dg-t--core" x="440" y="48">plain Java</text>
+                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
+                <text class="dg-t" x="620" y="30">Violation</text>
+                <text class="dg-t" x="620" y="48">and fine</text>
+              </svg>
+              <figcaption>Limits and fine tiers are read from application.yml, so a policy revision is a config change. The engine itself has no Spring and no database in it.</figcaption>
+            </figure>
             <dl class="detail__rows">
               <dt>The problem</dt>
               <dd>Penalty policy changes more often than the software that applies it. Encoding speed limits and fine tiers in Java means a code change and a redeploy for every revision.</dd>
               <dt>The decision</dt>
-              <dd>The limits and the fine tiers are configured under <code>traffic.rules</code> in <code>application.yml</code>. The engine itself is plain Java with no Spring and no database in it, so the rules can be tested without starting either.</dd>
+              <dd>The limits and the fine tiers are configured under <code>traffic.rules</code> in <code>application.yml</code>. The engine is plain Java, so the rules can be tested without starting Spring or a database.</dd>
               <dt>Stack</dt>
-              <dd>Java 21, Spring Boot 3.4 and Spring Data JPA over an in-memory H2 database. The Maven wrapper is committed, so it builds without Maven installed.</dd>
-              <dt>Running it</dt>
-              <dd><code>./scripts/start.sh</code> on port 8080. Tests are <code>./mvnw test</code> &mdash; unit tests on the engine, MockMvc tests on the API.</dd>
+              <dd>Java 21, Spring Boot 3.4 and Spring Data JPA over an in-memory H2 database.</dd>
             </dl>
-            <p class="detail__link"><a href="https://github.com/Krish3101/trafficengine" target="_blank" rel="noopener">Source on GitHub</a></p>
+            <p class="detail__links">
+              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
+              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
+              -->
+              <a href="https://github.com/Krish3101/trafficengine" target="_blank" rel="noopener">Source on GitHub</a>
+            </p>
           </div>
         </details>
       </article>
@@ -161,17 +234,41 @@
             <span class="entry__cue"></span>
           </summary>
           <div class="detail">
+            <figure class="figure">
+              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-text-to-sql">
+                <title id="dg-text-to-sql">How text-to-sql checks a generated query</title>
+                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
+                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
+                <text class="dg-t" x="80" y="30">English</text>
+                <text class="dg-t" x="80" y="48">question</text>
+                <rect class="dg-box" x="184" y="6" width="152" height="58"/>
+                <text class="dg-t" x="260" y="30">Model</text>
+                <text class="dg-t" x="260" y="48">drafts SQL</text>
+                <rect class="dg-box dg-box--core" x="364" y="6" width="152" height="58"/>
+                <text class="dg-t dg-t--core" x="440" y="30">sqlglot</text>
+                <text class="dg-t dg-t--core" x="440" y="48">classify the tree</text>
+                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
+                <text class="dg-t" x="620" y="30">Read-only run</text>
+                <text class="dg-t" x="620" y="48">writes need approval</text>
+              </svg>
+              <figcaption>The query is classified from its syntax tree rather than from its text, so the same statement phrased differently cannot slip past.</figcaption>
+            </figure>
             <dl class="detail__rows">
               <dt>The problem</dt>
               <dd>A generated query is untrusted input that happens to look like SQL. Checking it by matching strings fails as soon as the same statement is phrased a little differently.</dd>
               <dt>The decision</dt>
-              <dd>Every query is parsed into a syntax tree before it runs and classified from that tree rather than from its text. Reads open on a read-only connection; anything that writes needs explicit approval first.</dd>
+              <dd>Every query is parsed into a syntax tree before it runs. Reads open on a read-only connection; anything that writes needs explicit approval first.</dd>
               <dt>Stack</dt>
               <dd>Streamlit, sqlglot, SQLAlchemy and pandas, with the model called over OpenRouter through <code>urllib</code>.</dd>
-              <dt>Running it</dt>
-              <dd><code>./scripts/start.sh</code> on port 8501. Tests are <code>pytest tests/ -v</code>.</dd>
             </dl>
-            <p class="detail__link"><a href="https://github.com/Krish3101/text-to-sql" target="_blank" rel="noopener">Source on GitHub</a></p>
+            <p class="detail__links">
+              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
+              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
+              -->
+              <a href="https://github.com/Krish3101/text-to-sql" target="_blank" rel="noopener">Source on GitHub</a>
+            </p>
           </div>
         </details>
       </article>
@@ -186,25 +283,44 @@
             <span class="entry__cue"></span>
           </summary>
           <div class="detail">
+            <figure class="figure">
+              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-disputeledger">
+                <title id="dg-disputeledger">How disputeledger keeps its audit trail honest</title>
+                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
+                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
+                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
+                <text class="dg-t" x="80" y="30">Dispute</text>
+                <text class="dg-t" x="80" y="48">change</text>
+                <rect class="dg-box dg-box--core" x="184" y="6" width="152" height="58"/>
+                <text class="dg-t dg-t--core" x="260" y="30">Append event</text>
+                <text class="dg-t dg-t--core" x="260" y="48">hash of the last</text>
+                <rect class="dg-box" x="364" y="6" width="152" height="58"/>
+                <text class="dg-t" x="440" y="30">SQLite</text>
+                <text class="dg-t" x="440" y="48">event chain</text>
+                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
+                <text class="dg-t" x="620" y="30">Verify</text>
+                <text class="dg-t" x="620" y="48">recompute the chain</text>
+              </svg>
+              <figcaption>A row edited directly in the database breaks the link instead of passing quietly.</figcaption>
+            </figure>
             <dl class="detail__rows">
               <dt>The problem</dt>
               <dd>An audit log kept as ordinary rows is only as trustworthy as the database holding it. Anyone with write access can rewrite history and leave nothing behind to show it.</dd>
               <dt>The decision</dt>
-              <dd>Every change appends an event carrying the previous event&rsquo;s hash. Verification walks the chain and recomputes each hash in turn, so a row edited directly in SQLite breaks the link rather than passing quietly.</dd>
+              <dd>Every change appends an event carrying the previous event&rsquo;s hash. Verification walks the chain and recomputes each hash in turn.</dd>
               <dt>Stack</dt>
-              <dd>TypeScript run straight through <code>tsx</code> with no build step, Express, better-sqlite3 and Zod. Passwords go through scrypt. The frontend is plain HTML, CSS and ES modules.</dd>
-              <dt>Running it</dt>
-              <dd><code>./scripts/start.sh</code> on port 3000. Tests are <code>npm test</code>, running under Vitest.</dd>
+              <dd>TypeScript, Express, better-sqlite3 and Zod, with scrypt for passwords.</dd>
             </dl>
-            <p class="detail__link"><a href="https://github.com/Krish3101/disputeledger" target="_blank" rel="noopener">Source on GitHub</a></p>
+            <p class="detail__links">
+              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
+              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
+              -->
+              <a href="https://github.com/Krish3101/disputeledger" target="_blank" rel="noopener">Source on GitHub</a>
+            </p>
           </div>
         </details>
       </article>
-
-      <p class="section__more">
-        More, including the projects not listed here, at
-        <a href="https://github.com/Krish3101" target="_blank" rel="noopener">github.com/Krish3101</a>.
-      </p>
     </div>
   </section>
 
@@ -216,14 +332,14 @@
       <div class="about">
         <div class="about__body">
           <p>
-            I prefer systems whose behaviour you can work out on paper. That preference shows up
-            the same way each time: the part that decides something is separated from the part
-            that talks to the network, so it can be read and tested on its own.
+            The projects above were built outside coursework, each one on my own and end to
+            end &mdash; the schema, the tests, and the script that starts it.
           </p>
           <p>
-            It is why the rule engine has no Spring in it, why the geospatial work happens in
-            PostGIS rather than in Python, and why the projects that use a language model still
-            do all of their arithmetic without one.
+            I write Java, Python and TypeScript, and reach for React on the front end. Trying
+            a new tool is the part of this I enjoy most &mdash; but whatever I use, I want what
+            comes out of it to stay simple and to look good. If you want to know what I can do,
+            the repositories are the honest answer; they are all linked above.
           </p>
         </div>
         <div class="about__side">
@@ -233,14 +349,12 @@
             MIT ADT University, Pune<br>
             CGPA 8.68 &middot; expected May 2027
           </p>
-          <h3>Tools</h3>
+          <h3>Technical skills</h3>
           <p>
-            <b>Languages</b> &mdash; Java, Python, TypeScript, JavaScript, SQL<br>
-            <b>Backend</b> &mdash; Spring Boot, FastAPI, Flask, Express<br>
-            <b>Data</b> &mdash; PostgreSQL, PostGIS, SQLite, SQLAlchemy, Spring Data JPA<br>
-            <b>Geospatial</b> &mdash; GeoPandas, Shapely, OSMnx<br>
-            <b>Frontend</b> &mdash; React, Vite, Tailwind CSS<br>
-            <b>Tooling</b> &mdash; Docker, Git, Maven, pytest, JUnit, Vitest
+            <b>Languages</b> &mdash; Python, Java, SQL, JavaScript, TypeScript<br>
+            <b>Databases</b> &mdash; PostgreSQL, PostGIS, SQLite<br>
+            <b>Frameworks &amp; libraries</b> &mdash; Spring Boot, FastAPI, Express, SQLAlchemy, React, Vite, Tailwind CSS<br>
+            <b>Tools &amp; platforms</b> &mdash; Git, Docker, Maven, Postman, Linux
           </p>
         </div>
       </div>
@@ -253,8 +367,7 @@
         <h2>Get in touch</h2>
       </div>
       <p class="contact__body">
-        I am in Pune, and open to software engineering roles from mid-2027 and to internships
-        before then. Email reaches me fastest.
+        I am in Pune and open to work. Email reaches me fastest.
       </p>
       <p class="opening__links">
         <a href="mailto:krishkalya31012005@gmail.com">krishkalya31012005@gmail.com</a>
@@ -269,7 +382,6 @@
 <footer class="footer">
   <div class="shell footer__inner">
     <p>&copy; <span id="year">2026</span> Krishkumar Kalya</p>
-    <p>Plain HTML and CSS. No framework, no build step.</p>
   </div>
 </footer>
 

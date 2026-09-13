@@ -85,7 +85,7 @@
 % ---------------------------------------------------------
 % LINE SPACING
 % ---------------------------------------------------------
-\setstretch{1.06}
+\setstretch{1.03}
 
 % ---------------------------------------------------------
 % REMOVE PAGE NUMBERS
@@ -122,6 +122,18 @@
 \vspace{-4pt}
 
 % =========================================================
+% SUMMARY
+% =========================================================
+
+\section{SUMMARY}
+
+\begin{itemize}[leftmargin=0pt]
+
+\item[]\small{I build web services end to end --- the database schema, the API, and the interface on top --- mostly in Java, Python and TypeScript. I want to keep doing that on software people actually use.}
+
+\end{itemize}
+
+% =========================================================
 % EDUCATION
 % =========================================================
 
@@ -136,7 +148,7 @@
 {Expected May 2027}
 
 \vspace{2pt}
-\item[]\small{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Management Systems, Object-Oriented Programming, Operating Systems, Computer Networks, Software Engineering}
+\item[]\small{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Management Systems, Operating Systems, Computer Networks}
 
 \end{itemize}
 
@@ -150,11 +162,11 @@
 
 \item[]\small{\textbf{Languages:} Python, Java, SQL, JavaScript, TypeScript}
 \vspace{1.5pt}
-\item[]\small{\textbf{Databases:} PostgreSQL, PostGIS, SQLite, SQLAlchemy}
+\item[]\small{\textbf{Databases:} PostgreSQL, PostGIS, SQLite}
 \vspace{1.5pt}
-\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Flask, Express, Spring Data JPA, GeoPandas}
+\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Express, SQLAlchemy, React, Vite, Tailwind CSS}
 \vspace{1.5pt}
-\item[]\small{\textbf{Tools \& Platforms:} Git, GitHub, Docker, Postman, Linux, Maven}
+\item[]\small{\textbf{Tools \& Platforms:} Git, Docker, Maven, Postman, Linux}
 
 \end{itemize}
 
@@ -178,11 +190,11 @@
 % Curriculum reconstructed from the Google Developer Program skill badges
 % earned 1-18 June 2025, so every item below is publicly verifiable.
 \resumeItem{
-Completed the 10-week AICTE--EduSkills AI-ML virtual internship, supported by Google for Developers, for fifth-semester internship credit.
+Completed the 10-week AICTE--EduSkills AI-ML virtual internship, supported by Google for Developers.
 }
 
 \resumeItem{
-Covered TensorFlow, image classification, object detection and product image search through Google Developers ML pathways, earning a skill badge for each.
+Covered TensorFlow, image classification, object detection and product image search through Google Developers ML pathways.
 }
 
 \end{itemize}
@@ -230,7 +242,7 @@ Built a single async FastAPI service that maps Python geospatial functions into 
 }
 
 \resumeItem{
-Implemented the spatial toolset over OpenStreetMap boundaries and Planetary Computer Sentinel-2 imagery, returning GeoJSON, GeoPackage and GeoTIFF files, with geocoding throttled to one request per second to respect the Nominatim usage policy.
+Implemented the spatial toolset over OpenStreetMap boundaries and Planetary Computer Sentinel-2 imagery, returning GeoJSON, GeoPackage and GeoTIFF files.
 }
 
 \resumeItem{
@@ -239,8 +251,9 @@ Constrained the model to tool selection only: coordinates and output paths stay 
 
 \end{itemize}
 
+% {} breaks the ffi ligature, which a PDF text extractor reads as U+FB03 and not as "ffi".
 \resumeProjectHeading
-{trafficengine}
+{traf\hspace{0.01pt}f\hspace{0.01pt}icengine}
 {https://github.com/Krish3101/trafficengine}
 {Java 21, Spring Boot 3.4, Spring Data JPA, H2}
 
@@ -273,8 +286,6 @@ Tested the engine with JUnit 5 unit tests and MockMvc integration tests, and val
 \item[]\small{\textbf{Java Programming: Solving Problems with Software} -- Duke University, Coursera}
 \vspace{1.5pt}
 \item[]\small{\textbf{Data Structures} -- University of California San Diego, Coursera}
-\vspace{1.5pt}
-\item[]\small{\textbf{Advanced Java} -- LearnKartS, Coursera}
 \vspace{1.5pt}
 \item[]\small{\textbf{Neural Networks and Deep Learning} -- DeepLearning.AI, Coursera}
 
