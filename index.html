@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krishkumar Kalya</title>
-<meta name="description" content="Krishkumar Kalya — developer in Pune. Full-stack projects in Java, Python, TypeScript, Spring Boot, FastAPI, React and PostGIS.">
+<meta name="description" content="Krishkumar Kalya — developer in Pune. Projects in Java, Python and TypeScript, built with Spring Boot, FastAPI and Express.">
 <meta name="author" content="Krishkumar Kalya">
 <link rel="canonical" href="https://krish3101.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23faf8f4%22%2F%3E%3Crect%20width%3D%223%22%20height%3D%2232%22%20fill%3D%22%23a03e2a%22%2F%3E%3Ctext%20x%3D%2219%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2222%22%20fill%3D%22%231f1c17%22%3EK%3C%2Ftext%3E%3C%2Fsvg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Krishkumar Kalya">
-<meta property="og:description" content="A developer working across the stack. Projects in Java, Python, TypeScript, React and PostGIS.">
+<meta property="og:description" content="A developer working across the stack. Projects in Java, Python and TypeScript.">
 <meta property="og:url" content="https://krish3101.github.io/">
 <meta property="og:image" content="https://krish3101.github.io/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -130,55 +130,6 @@
         <details>
           <summary>
             <span class="entry__num" aria-hidden="true">02</span>
-            <h3 class="entry__name">farmland</h3>
-            <span class="entry__stack">Python &middot; PostGIS</span>
-            <span class="entry__lede">Turns a messy farmland spreadsheet into validated field boundaries, served as RFC 7946 GeoJSON.</span>
-            <span class="entry__cue"></span>
-          </summary>
-          <div class="detail">
-            <figure class="figure">
-              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-farmland">
-                <title id="dg-farmland">How farmland turns spreadsheet rows into served geometry</title>
-                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
-                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
-                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
-                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
-                <text class="dg-t" x="80" y="30">Spreadsheet</text>
-                <text class="dg-t" x="80" y="48">rows</text>
-                <rect class="dg-box dg-box--core" x="184" y="6" width="152" height="58"/>
-                <text class="dg-t dg-t--core" x="260" y="30">PostGIS refresh</text>
-                <text class="dg-t dg-t--core" x="260" y="48">clean &amp; validate</text>
-                <rect class="dg-box" x="364" y="6" width="152" height="58"/>
-                <text class="dg-t" x="440" y="30">Materialised view</text>
-                <text class="dg-t" x="440" y="48">indexed geometry</text>
-                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
-                <text class="dg-t" x="620" y="30">FastAPI read</text>
-                <text class="dg-t" x="620" y="48">RFC 7946 GeoJSON</text>
-              </svg>
-              <figcaption>Cleaning happens once, when the view refreshes. A request is then an indexed lookup on geometry that has already been validated.</figcaption>
-            </figure>
-            <dl class="detail__rows">
-              <dt>The problem</dt>
-              <dd>Field boundaries arrive as spreadsheet text: inconsistent coordinate order, malformed polygons, duplicate vertices. Cleaning all of that on every read would make every read slow.</dd>
-              <dt>The decision</dt>
-              <dd>The cleaning happens in PostGIS when the materialised view refreshes, not when a request arrives.</dd>
-              <dt>Stack</dt>
-              <dd>FastAPI, SQLAlchemy, asyncpg and Pydantic over PostGIS, brought up with Docker Compose. Requests authenticate with an <code>X-API-Key</code> header.</dd>
-            </dl>
-            <p class="detail__links">
-              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
-              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
-              -->
-              <a href="https://github.com/Krish3101/farmland" target="_blank" rel="noopener">Source on GitHub</a>
-            </p>
-          </div>
-        </details>
-      </article>
-
-      <article class="entry">
-        <details>
-          <summary>
-            <span class="entry__num" aria-hidden="true">03</span>
             <h3 class="entry__name">trafficengine</h3>
             <span class="entry__stack">Java &middot; Spring Boot</span>
             <span class="entry__lede">Takes a vehicle speed reading, decides whether it is a violation, and computes the fine.</span>
@@ -227,7 +178,7 @@
       <article class="entry">
         <details>
           <summary>
-            <span class="entry__num" aria-hidden="true">04</span>
+            <span class="entry__num" aria-hidden="true">03</span>
             <h3 class="entry__name">text-to-sql</h3>
             <span class="entry__stack">Python &middot; sqlglot</span>
             <span class="entry__lede">Ask a question in English, get a SQLite query, and run it against a bundled sample database.</span>
@@ -276,7 +227,7 @@
       <article class="entry">
         <details>
           <summary>
-            <span class="entry__num" aria-hidden="true">05</span>
+            <span class="entry__num" aria-hidden="true">04</span>
             <h3 class="entry__name">disputeledger</h3>
             <span class="entry__stack">TypeScript &middot; Express</span>
             <span class="entry__lede">Tracks commercial disputes between supply chain partners, with an audit trail that cannot be quietly edited.</span>

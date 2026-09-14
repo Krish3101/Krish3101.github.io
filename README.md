@@ -6,7 +6,7 @@ Plain HTML and CSS. No framework and no build step, so what is in the repo is ex
 browser gets.
 
 ```
-index.html               the whole page, including the five project entries
+index.html               the whole page, including the four project entries
 assets/css/styles.css    the stylesheet
 assets/js/main.js        one line, to keep the footer year current
 assets/og-card.png       1200x630 link preview image
@@ -30,7 +30,7 @@ demo link that goes nowhere is worse than no link at all.
 
 The diagram is a hand-written inline `<svg>` in a `<figure>` — four stages left to right, the
 deterministic one outlined in the accent colour, and a `<figcaption>` for what will not fit in
-a box. All five share one geometry: a 700-unit viewBox, 152x58 boxes at x = 4, 184, 364, 544,
+a box. All four share one geometry: a 700-unit viewBox, 152x58 boxes at x = 4, 184, 364, 544,
 labels centred at 80, 260, 440, 620. Colours and type size come from the `.dg-*` rules in the
 stylesheet, so nothing is styled inline.
 
