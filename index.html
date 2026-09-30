@@ -117,9 +117,6 @@
               <dd>pydantic-ai, FastAPI, GeoPandas, OSMnx and SQLite. Boundaries from OpenStreetMap, imagery from Planetary Computer Sentinel-2.</dd>
             </dl>
             <p class="detail__links">
-              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
-              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
-              -->
               <a href="https://github.com/Krish3101/geoagent" target="_blank" rel="noopener">Source on GitHub</a>
             </p>
           </div>
@@ -212,12 +209,9 @@
               <dt>The decision</dt>
               <dd>Every query is parsed into a syntax tree before it runs. Reads open on a read-only connection; anything that writes needs explicit approval first.</dd>
               <dt>Stack</dt>
-              <dd>Streamlit, sqlglot, SQLAlchemy and pandas, with the model called over OpenRouter through <code>urllib</code>.</dd>
+              <dd>Streamlit, sqlglot, pandas and SQLite, with the model called over OpenRouter through <code>urllib</code>.</dd>
             </dl>
             <p class="detail__links">
-              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
-              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
-              -->
               <a href="https://github.com/Krish3101/text-to-sql" target="_blank" rel="noopener">Source on GitHub</a>
             </p>
           </div>
@@ -259,7 +253,7 @@
               <dt>The problem</dt>
               <dd>An audit log kept as ordinary rows is only as trustworthy as the database holding it. Anyone with write access can rewrite history and leave nothing behind to show it.</dd>
               <dt>The decision</dt>
-              <dd>Every change appends an event carrying the previous event&rsquo;s hash. Verification walks the chain and recomputes each hash in turn.</dd>
+              <dd>Every change appends an event carrying the previous event&rsquo;s hash, keyed with a secret kept outside the database (HMAC). Verification walks the chain and recomputes each hash in turn.</dd>
               <dt>Stack</dt>
               <dd>TypeScript, Express, better-sqlite3 and Zod, with scrypt for passwords.</dd>
             </dl>
@@ -313,9 +307,6 @@
               <dd>FastAPI, SQLAlchemy and SQLite, with React, TypeScript, Tailwind and Recharts on the front end. Forecasts from OpenWeather.</dd>
             </dl>
             <p class="detail__links">
-              <!-- Live demo: put the URL in the href, then delete this line and the one after the link.
-              <a class="btn" href="" target="_blank" rel="noopener">Live demo</a>
-              -->
               <a href="https://github.com/Krish3101/croprisk" target="_blank" rel="noopener">Source on GitHub</a>
             </p>
           </div>
