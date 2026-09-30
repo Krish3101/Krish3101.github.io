@@ -61,6 +61,14 @@
     \par\vspace{0.8pt}
 }
 
+% Same, with a live demo link
+\newcommand{\resumeProjectHeadingLive}[4]{%
+    \item[]
+    \noindent
+    \textbf{#1} \ $|$ \ \href{#2}{\small\faGithub\ GitHub} \ $|$ \ \href{#3}{\small\faGlobe\ Live} \ $|$ \ \textit{\small #4}
+    \par\vspace{0.8pt}
+}
+
 \newcommand{\resumeItem}[1]{%
     \item\small #1
 }
@@ -147,8 +155,6 @@
 {Bachelor of Technology in Computer Science and Engineering \textbar\ \textbf{CGPA: 8.68}}
 {Expected May 2027}
 
-\vspace{2pt}
-\item[]\small{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Database Management Systems, Operating Systems, Computer Networks}
 
 \end{itemize}
 
@@ -162,11 +168,11 @@
 
 \item[]\small{\textbf{Languages:} Python, Java, SQL, JavaScript, TypeScript}
 \vspace{1.5pt}
-\item[]\small{\textbf{Databases:} PostgreSQL, PostGIS, SQLite}
+\item[]\small{\textbf{Databases:} PostgreSQL, SQLite}
 \vspace{1.5pt}
 \item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Express, SQLAlchemy, React, Vite, Tailwind CSS}
 \vspace{1.5pt}
-\item[]\small{\textbf{Tools \& Platforms:} Git, Docker, Maven, Postman, Linux}
+\item[]\small{\textbf{Tools \& Platforms:} Git, Docker, Maven, Render, Linux}
 
 \end{itemize}
 
@@ -190,11 +196,7 @@
 % Curriculum reconstructed from the Google Developer Program skill badges
 % earned 1-18 June 2025, so every item below is publicly verifiable.
 \resumeItem{
-Completed the 10-week AICTE--EduSkills AI-ML virtual internship, supported by Google for Developers.
-}
-
-\resumeItem{
-Covered TensorFlow, image classification, object detection and product image search through Google Developers ML pathways.
+10-week program covering TensorFlow, image classification, object detection and product image search.
 }
 
 \end{itemize}
@@ -209,23 +211,46 @@ Covered TensorFlow, image classification, object detection and product image sea
 
 \begin{itemize}[leftmargin=0pt]
 
-\resumeProjectHeading
+\resumeProjectHeadingLive
 {disputeledger}
 {https://github.com/Krish3101/disputeledger}
-{TypeScript, Express, better-sqlite3, Zod}
+{https://disputeledger.onrender.com}
+{TypeScript, Express, SQLite, Zod}
 
 \begin{itemize}
 
 \resumeItem{
-Built a dispute tracking system for supply chain partners: disputes are raised with evidence attached, arbiters resolve them, and every action is recorded on an append-only event log.
+Built a dispute tracker for supply chain partners: disputes, evidence and an arbiter's ruling, all on an append-only event log.
 }
 
 \resumeItem{
-Made the log tamper-evident by chaining events with SHA-256 --- each event stores the previous event's hash, so verification recomputes the chain and a row edited directly in the database breaks the link instead of passing unnoticed.
+Chained the events with HMAC-SHA256, keyed outside the database, so a row edited in SQLite fails the integrity check, which names the event.
 }
 
 \resumeItem{
-Kept the dispute rules in a pure domain module with no I/O so they are testable on their own; authentication uses scrypt-hashed passwords and server-side session tokens. Tested with Vitest and supertest.
+Kept the dispute rules in a module with no I/O and tested them with Vitest and supertest; passwords use scrypt with a timing-safe compare.
+}
+
+\end{itemize}
+
+\resumeProjectHeadingLive
+{traf\hspace{0.01pt}f\hspace{0.01pt}icengine}
+{https://github.com/Krish3101/trafficengine}
+{https://traffic-app-oxw2.onrender.com}
+{Java 21, Spring Boot 3.4, Spring Data JPA, PostgreSQL, Docker}
+
+\begin{itemize}
+
+\resumeItem{
+Built a Spring Boot service that checks speed readings against zone limits, works out tiered fines and stores citations in PostgreSQL.
+}
+
+\resumeItem{
+Kept the rule engine as plain Java with no Spring in it and the limits in \texttt{application.yml}, so a policy change is a config change.
+}
+
+\resumeItem{
+Tested with JUnit 5 and MockMvc; packaged with Docker and deployed on Render with a managed PostgreSQL database.
 }
 
 \end{itemize}
@@ -233,42 +258,41 @@ Kept the dispute rules in a pure domain module with no I/O so they are testable 
 \resumeProjectHeading
 {geoagent}
 {https://github.com/Krish3101/geoagent}
-{pydantic-ai, FastAPI, GeoPandas, OSMnx, SQLite}
+{Python, FastAPI, pydantic-ai, GeoPandas, OSMnx}
 
 \begin{itemize}
 
 \resumeItem{
-Built a single async FastAPI service that maps Python geospatial functions into LLM tools through Pydantic-AI, so every model-issued call is validated against a typed contract instead of a hand-rolled planner loop.
+Built a chat app that turns plain-language GIS requests into GeoJSON, GeoPackage and GeoTIFF files from OpenStreetMap and Sentinel-2.
 }
 
 \resumeItem{
-Implemented the spatial toolset over OpenStreetMap boundaries and Planetary Computer Sentinel-2 imagery, returning GeoJSON, GeoPackage and GeoTIFF files.
+Limited the LLM to choosing tools: coordinates never come from the model, so every geometry calculation is done in Python.
 }
 
 \resumeItem{
-Constrained the model to tool selection only: coordinates and output paths stay in the run context and never appear in model output, so every geometry calculation is done by Python. Task progress streams to the browser over server-sent events.
+Ran each request as a task with explicit states and streamed its progress to the browser over server-sent events.
 }
 
 \end{itemize}
 
-% {} breaks the ffi ligature, which a PDF text extractor reads as U+FB03 and not as "ffi".
 \resumeProjectHeading
-{traf\hspace{0.01pt}f\hspace{0.01pt}icengine}
-{https://github.com/Krish3101/trafficengine}
-{Java 21, Spring Boot 3.4, Spring Data JPA, H2}
+{croprisk}
+{https://github.com/Krish3101/croprisk}
+{Python, FastAPI, SQLAlchemy, React, TypeScript, Tailwind CSS}
 
 \begin{itemize}
 
 \resumeItem{
-Built a rule engine in Java and Spring Boot that evaluates speed events against configurable thresholds and calculates tiered fines, exempting emergency vehicles before any penalty applies.
+Built a web app that scores a five-day forecast into a 0--100 risk for a crop at its current growth stage (6 crops, 5 stages each).
 }
 
 \resumeItem{
-Kept the rule engine as plain Java with no Spring and no database in it, so the rules are unit-testable without starting either; speed limits and fine tiers are configured in \texttt{application.yml} rather than compiled into the code.
+Kept the scoring as plain arithmetic with no I/O; an LLM only rewrites the finished numbers as advice, with written advice as the fallback.
 }
 
 \resumeItem{
-Tested the engine with JUnit 5 unit tests and MockMvc integration tests, and validated request payloads with Jakarta Bean Validation.
+Cached results for 12 hours, dropped when a field's stage changes; React front end charts the forecast against the stage's thresholds.
 }
 
 \end{itemize}
@@ -283,11 +307,7 @@ Tested the engine with JUnit 5 unit tests and MockMvc integration tests, and val
 
 \begin{itemize}[leftmargin=0pt]
 
-\item[]\small{\textbf{Java Programming: Solving Problems with Software} -- Duke University, Coursera}
-\vspace{1.5pt}
-\item[]\small{\textbf{Data Structures} -- University of California San Diego, Coursera}
-\vspace{1.5pt}
-\item[]\small{\textbf{Neural Networks and Deep Learning} -- DeepLearning.AI, Coursera}
+\item[]\small{Java Programming (Duke) \textbar\ Data Structures (UC San Diego) \textbar\ Neural Networks and Deep Learning (DeepLearning.AI) --- all on Coursera}
 
 \end{itemize}
 
