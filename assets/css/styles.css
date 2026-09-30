@@ -87,6 +87,15 @@ b { font-weight: 500; }
 
 .opening { padding: 92px 0 78px; }
 
+.opening__status {
+  margin: 0 0 22px;
+  font-size: 13px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 400;
+}
+
 .opening__statement {
   font-family: var(--serif);
   font-weight: 400;
@@ -215,6 +224,18 @@ b { font-weight: 500; }
 .entry details[open] .entry__cue::after { content: "Close"; }
 
 .entry details[open] { background: var(--paper-sunk); }
+
+/* live demo link */
+.entry--live { position: relative; }
+
+.entry__live {
+  position: absolute;
+  top: 104px;
+  left: calc(100% - 200px);
+  font-size: 15px;
+}
+
+.entry details[open] + .entry__live { display: none; }
 .entry details[open] .entry__num,
 .entry details[open] .entry__name { color: var(--accent); }
 
@@ -395,6 +416,9 @@ b { font-weight: 500; }
   .entry__lede { grid-column: 2 / 4; font-size: 17px; }
   .entry__stack { grid-column: 2; grid-row: 3; padding-top: 12px; }
   .entry__cue { grid-column: 3; grid-row: 3; padding-top: 12px; text-align: right; }
+
+  .entry--live details:not([open]) > summary { padding-bottom: 56px; }
+  .entry__live { top: auto; bottom: 26px; left: 52px; }
 
   .detail { grid-template-columns: 36px 1fr; gap: 0 16px; }
   .figure { margin-bottom: 24px; }

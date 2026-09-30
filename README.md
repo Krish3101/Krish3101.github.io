@@ -19,6 +19,10 @@ Each project is an `<article class="entry">` holding a `<details>`: the `<summar
 name, one-line description and stack, and the block after it has a small diagram, three
 rows of text and the links. To add a project, copy an entry and change the text.
 
+A project with a live demo also gets `entry--live` on its `<article>` and an
+`<a class="entry__live">` right after its `</details>`, so the demo link shows without
+opening the entry. It sits outside the `<summary>` so it stays a plain link.
+
 Keep the descriptions true to what the code does.
 
 ## Commands
