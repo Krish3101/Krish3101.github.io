@@ -1,8 +1,6 @@
 \documentclass[11pt,a4paper]{article}
 
-% ---------------------------------------------------------
-% PACKAGES
-% ---------------------------------------------------------
+% Packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=0.52in]{geometry}
@@ -13,14 +11,10 @@
 \usepackage{fontawesome}
 \usepackage{setspace}
 
-% ---------------------------------------------------------
-% COLORS
-% ---------------------------------------------------------
+% Colors
 \definecolor{darkblue}{RGB}{0,51,102}
 
-% ---------------------------------------------------------
-% HYPERLINK SETUP
-% ---------------------------------------------------------
+% Hyperlink setup
 \hypersetup{
     colorlinks=true,
     linkcolor=darkblue,
@@ -29,12 +23,10 @@
     pdftitle={Krishkumar Kalya - Resume},
     pdfauthor={Krishkumar Kalya},
     pdfsubject={Resume},
-    pdfkeywords={Software Developer, Java, Python, TypeScript, Spring Boot, FastAPI, React}
+    pdfkeywords={Software Developer, Java, Python, TypeScript, Spring Boot, FastAPI, Express}
 }
 
-% ---------------------------------------------------------
-% SECTION FORMATTING
-% ---------------------------------------------------------
+% Section formatting
 \titleformat{\section}
     {\large\bfseries\color{darkblue}}
     {}
@@ -44,9 +36,7 @@
 
 \titlespacing*{\section}{0pt}{7pt}{4pt}
 
-% ---------------------------------------------------------
-% CUSTOM COMMANDS
-% ---------------------------------------------------------
+% Custom commands
 
 % Education / Experience heading
 \newcommand{\resumeSubheading}[4]{%
@@ -77,9 +67,7 @@
     \item\small #1
 }
 
-% ---------------------------------------------------------
-% LIST SETTINGS
-% ---------------------------------------------------------
+% List settings
 \setlist[itemize]{
     leftmargin=12pt,
     itemsep=2.5pt,
@@ -94,24 +82,16 @@
     topsep=0.8pt
 }
 
-% ---------------------------------------------------------
-% LINE SPACING
-% ---------------------------------------------------------
+% Line spacing
 \setstretch{1.03}
 
-% ---------------------------------------------------------
-% REMOVE PAGE NUMBERS
-% ---------------------------------------------------------
+% Remove page numbers
 \pagestyle{empty}
 
-% =========================================================
-% DOCUMENT
-% =========================================================
+% Document
 \begin{document}
 
-% =========================================================
-% HEADER
-% =========================================================
+% Header
 
 \begin{center}
 
@@ -133,9 +113,7 @@
 
 \vspace{-4pt}
 
-% =========================================================
-% SUMMARY
-% =========================================================
+% Summary
 
 \section{SUMMARY}
 
@@ -145,9 +123,7 @@
 
 \end{itemize}
 
-% =========================================================
-% EDUCATION
-% =========================================================
+% Education
 
 \section{EDUCATION}
 
@@ -161,9 +137,7 @@
 
 \end{itemize}
 
-% =========================================================
-% TECHNICAL SKILLS
-% =========================================================
+% Technical skills
 
 \section{TECHNICAL SKILLS}
 
@@ -173,15 +147,13 @@
 \vspace{1.5pt}
 \item[]\small{\textbf{Databases:} PostgreSQL, SQLite}
 \vspace{1.5pt}
-\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Express, SQLAlchemy, React, Vite, Tailwind CSS}
+\item[]\small{\textbf{Frameworks \& Libraries:} Spring Boot, FastAPI, Express, SQLAlchemy, pydantic-ai, GeoPandas}
 \vspace{1.5pt}
 \item[]\small{\textbf{Tools \& Platforms:} Git, Docker, Maven, Render, Linux}
 
 \end{itemize}
 
-% =========================================================
-% EXPERIENCE
-% =========================================================
+% Experience
 
 \section{EXPERIENCE}
 
@@ -203,9 +175,7 @@
 
 \end{itemize}
 
-% =========================================================
-% PROJECTS
-% =========================================================
+% Projects
 
 \section{PROJECTS}
 
@@ -263,7 +233,7 @@ Tested with JUnit 5 and MockMvc; packaged with Docker and deployed on Render wit
 \begin{itemize}
 
 \resumeItem{
-Built a chat app that turns plain-language GIS requests into GeoJSON, GeoPackage and GeoTIFF files from OpenStreetMap and Sentinel-2.
+Built a chat app that turns plain-language GIS requests into GeoJSON, GeoPackage and GeoTIFF files from \mbox{OpenStreetMap} and Sentinel-2.
 }
 
 \resumeItem{
@@ -278,9 +248,7 @@ Ran each request as a task with explicit states and streamed its progress to the
 
 \end{itemize}
 
-% =========================================================
-% CERTIFICATIONS
-% =========================================================
+% Certifications
 
 \section{CERTIFICATIONS}
 

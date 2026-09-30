@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Krishkumar Kalya</title>
-<meta name="description" content="Krishkumar Kalya, a final-year Computer Science student in Pune, open to internships and fresher roles. I build web services end to end in Java, Python and TypeScript: Spring Boot, FastAPI, React, PostgreSQL.">
+<meta name="description" content="Krishkumar Kalya, a final-year Computer Science student in Pune, open to internships and fresher roles. I build web services end to end in Java, Python and TypeScript: Spring Boot, FastAPI, Express, PostgreSQL.">
 <meta name="author" content="Krishkumar Kalya">
 <link rel="canonical" href="https://krish3101.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22%23faf8f4%22%2F%3E%3Crect%20width%3D%223%22%20height%3D%2232%22%20fill%3D%22%23a03e2a%22%2F%3E%3Ctext%20x%3D%2219%22%20y%3D%2224%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2222%22%20fill%3D%22%231f1c17%22%3EK%3C%2Ftext%3E%3C%2Fsvg%3E">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Krishkumar Kalya">
-<meta property="og:description" content="I build web services end to end in Java, Python and TypeScript. Spring Boot, FastAPI, React, PostgreSQL.">
+<meta property="og:description" content="I build web services end to end in Java, Python and TypeScript. Spring Boot, FastAPI, Express, PostgreSQL.">
 <meta property="og:url" content="https://krish3101.github.io/">
 <meta property="og:image" content="https://krish3101.github.io/assets/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -27,7 +27,7 @@
   "jobTitle": "Software Developer",
   "url": "https://krish3101.github.io/",
   "image": "https://krish3101.github.io/assets/og-card.png",
-  "knowsAbout": ["Java", "Python", "TypeScript", "Spring Boot", "FastAPI", "React", "PostgreSQL"],
+  "knowsAbout": ["Java", "Python", "TypeScript", "Spring Boot", "FastAPI", "Express", "PostgreSQL"],
   "email": "krishkalya31012005@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "MIT ADT University, Pune" },
@@ -78,50 +78,52 @@
         <h2>Work</h2>
       </div>
 
-      <article class="entry">
+      <article class="entry entry--live">
         <details>
           <summary>
             <span class="entry__num" aria-hidden="true">01</span>
-            <h3 class="entry__name">geoagent</h3>
-            <span class="entry__stack">Python &middot; pydantic-ai</span>
-            <span class="entry__lede">Ask for GIS data in plain language and get back real GeoJSON, GeoPackage and GeoTIFF files.</span>
+            <h3 class="entry__name">disputeledger</h3>
+            <span class="entry__stack">TypeScript &middot; Express</span>
+            <span class="entry__lede">Tracks commercial disputes between supply chain partners, with an audit trail that cannot be quietly edited.</span>
             <span class="entry__cue"></span>
           </summary>
           <div class="detail">
             <figure class="figure">
-              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-geoagent">
-                <title id="dg-geoagent">How geoagent answers a request</title>
+              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-disputeledger">
+                <title id="dg-disputeledger">How disputeledger keeps its audit trail honest</title>
                 <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
                 <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
                 <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
                 <rect class="dg-box" x="4" y="6" width="152" height="58"/>
-                <text class="dg-t" x="80" y="30">Plain-language</text>
-                <text class="dg-t" x="80" y="48">ask</text>
-                <rect class="dg-box" x="184" y="6" width="152" height="58"/>
-                <text class="dg-t" x="260" y="30">Model</text>
-                <text class="dg-t" x="260" y="48">picks a tool</text>
-                <rect class="dg-box dg-box--core" x="364" y="6" width="152" height="58"/>
-                <text class="dg-t dg-t--core" x="440" y="30">Python</text>
-                <text class="dg-t dg-t--core" x="440" y="48">GeoPandas &middot; OSMnx</text>
+                <text class="dg-t" x="80" y="30">Dispute</text>
+                <text class="dg-t" x="80" y="48">change</text>
+                <rect class="dg-box dg-box--core" x="184" y="6" width="152" height="58"/>
+                <text class="dg-t dg-t--core" x="260" y="30">Append event</text>
+                <text class="dg-t dg-t--core" x="260" y="48">hash of the last</text>
+                <rect class="dg-box" x="364" y="6" width="152" height="58"/>
+                <text class="dg-t" x="440" y="30">SQLite</text>
+                <text class="dg-t" x="440" y="48">event chain</text>
                 <rect class="dg-box" x="544" y="6" width="152" height="58"/>
-                <text class="dg-t" x="620" y="30">GeoJSON</text>
-                <text class="dg-t" x="620" y="48">GPKG &middot; GeoTIFF</text>
+                <text class="dg-t" x="620" y="30">Verify</text>
+                <text class="dg-t" x="620" y="48">recompute the chain</text>
               </svg>
-              <figcaption>The model only ever selects. Coordinates and file paths live in the run context, never in its output, so every calculation happens in Python.</figcaption>
+              <figcaption>A row edited directly in the database breaks the link instead of passing quietly.</figcaption>
             </figure>
             <dl class="detail__rows">
               <dt>The problem</dt>
-              <dd>A language model is fluent enough to invent a plausible bounding box, and downstream a wrong coordinate looks exactly like a right one.</dd>
+              <dd>An audit log kept as ordinary rows is only as trustworthy as the database holding it. Anyone with write access can rewrite history and leave nothing behind to show it.</dd>
               <dt>The decision</dt>
-              <dd>The model chooses which tool to call and nothing else. Coordinates and file paths live in the run context, never in the model&rsquo;s output.</dd>
+              <dd>Every change appends an event carrying the previous event&rsquo;s hash, keyed with a secret kept outside the database (HMAC). Verification walks the chain and recomputes each hash in turn.</dd>
               <dt>Stack</dt>
-              <dd>pydantic-ai, FastAPI, GeoPandas, OSMnx and SQLite. Boundaries from OpenStreetMap, imagery from Planetary Computer Sentinel-2.</dd>
+              <dd>TypeScript, Express, better-sqlite3 and Zod, with scrypt for passwords.</dd>
             </dl>
             <p class="detail__links">
-              <a href="https://github.com/Krish3101/geoagent" target="_blank" rel="noopener">Source on GitHub</a>
+              <a class="btn" href="https://disputeledger.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take about a minute">Live demo</a>
+              <a href="https://github.com/Krish3101/disputeledger" target="_blank" rel="noopener">Source on GitHub</a>
             </p>
           </div>
         </details>
+        <a class="entry__live" href="https://disputeledger.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take about a minute">Live demo<span aria-hidden="true"> &#8599;</span></a>
       </article>
 
       <article class="entry entry--live">
@@ -172,52 +174,50 @@
         <a class="entry__live" href="https://traffic-app-oxw2.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take up to two minutes">Live demo<span aria-hidden="true"> &#8599;</span></a>
       </article>
 
-      <article class="entry entry--live">
+      <article class="entry">
         <details>
           <summary>
             <span class="entry__num" aria-hidden="true">03</span>
-            <h3 class="entry__name">disputeledger</h3>
-            <span class="entry__stack">TypeScript &middot; Express</span>
-            <span class="entry__lede">Tracks commercial disputes between supply chain partners, with an audit trail that cannot be quietly edited.</span>
+            <h3 class="entry__name">geoagent</h3>
+            <span class="entry__stack">Python &middot; pydantic-ai</span>
+            <span class="entry__lede">Ask for GIS data in plain language and get back real GeoJSON, GeoPackage and GeoTIFF files.</span>
             <span class="entry__cue"></span>
           </summary>
           <div class="detail">
             <figure class="figure">
-              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-disputeledger">
-                <title id="dg-disputeledger">How disputeledger keeps its audit trail honest</title>
+              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-geoagent">
+                <title id="dg-geoagent">How geoagent answers a request</title>
                 <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
                 <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
                 <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
                 <rect class="dg-box" x="4" y="6" width="152" height="58"/>
-                <text class="dg-t" x="80" y="30">Dispute</text>
-                <text class="dg-t" x="80" y="48">change</text>
-                <rect class="dg-box dg-box--core" x="184" y="6" width="152" height="58"/>
-                <text class="dg-t dg-t--core" x="260" y="30">Append event</text>
-                <text class="dg-t dg-t--core" x="260" y="48">hash of the last</text>
-                <rect class="dg-box" x="364" y="6" width="152" height="58"/>
-                <text class="dg-t" x="440" y="30">SQLite</text>
-                <text class="dg-t" x="440" y="48">event chain</text>
+                <text class="dg-t" x="80" y="30">Plain-language</text>
+                <text class="dg-t" x="80" y="48">ask</text>
+                <rect class="dg-box" x="184" y="6" width="152" height="58"/>
+                <text class="dg-t" x="260" y="30">Model</text>
+                <text class="dg-t" x="260" y="48">picks a tool</text>
+                <rect class="dg-box dg-box--core" x="364" y="6" width="152" height="58"/>
+                <text class="dg-t dg-t--core" x="440" y="30">Python</text>
+                <text class="dg-t dg-t--core" x="440" y="48">GeoPandas &middot; OSMnx</text>
                 <rect class="dg-box" x="544" y="6" width="152" height="58"/>
-                <text class="dg-t" x="620" y="30">Verify</text>
-                <text class="dg-t" x="620" y="48">recompute the chain</text>
+                <text class="dg-t" x="620" y="30">GeoJSON</text>
+                <text class="dg-t" x="620" y="48">GPKG &middot; GeoTIFF</text>
               </svg>
-              <figcaption>A row edited directly in the database breaks the link instead of passing quietly.</figcaption>
+              <figcaption>The model only ever selects. Coordinates and file paths live in the run context, never in its output, so every calculation happens in Python.</figcaption>
             </figure>
             <dl class="detail__rows">
               <dt>The problem</dt>
-              <dd>An audit log kept as ordinary rows is only as trustworthy as the database holding it. Anyone with write access can rewrite history and leave nothing behind to show it.</dd>
+              <dd>A language model is fluent enough to invent a plausible bounding box, and downstream a wrong coordinate looks exactly like a right one.</dd>
               <dt>The decision</dt>
-              <dd>Every change appends an event carrying the previous event&rsquo;s hash, keyed with a secret kept outside the database (HMAC). Verification walks the chain and recomputes each hash in turn.</dd>
+              <dd>The model chooses which tool to call and nothing else. Coordinates and file paths live in the run context, never in the model&rsquo;s output.</dd>
               <dt>Stack</dt>
-              <dd>TypeScript, Express, better-sqlite3 and Zod, with scrypt for passwords.</dd>
+              <dd>pydantic-ai, FastAPI, GeoPandas, OSMnx and SQLite. Boundaries from OpenStreetMap, imagery from Planetary Computer Sentinel-2.</dd>
             </dl>
             <p class="detail__links">
-              <a class="btn" href="https://disputeledger.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take about a minute">Live demo</a>
-              <a href="https://github.com/Krish3101/disputeledger" target="_blank" rel="noopener">Source on GitHub</a>
+              <a href="https://github.com/Krish3101/geoagent" target="_blank" rel="noopener">Source on GitHub</a>
             </p>
           </div>
         </details>
-        <a class="entry__live" href="https://disputeledger.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take about a minute">Live demo<span aria-hidden="true"> &#8599;</span></a>
       </article>
 
     </div>
@@ -235,7 +235,7 @@
             end: the schema, the tests, and the script that starts it.
           </p>
           <p>
-            I write Java, Python and TypeScript, and reach for React on the front end. Trying
+            I write Java, Python and TypeScript, and keep the front ends plain HTML, CSS and JavaScript. Trying
             a new tool is the part of this I enjoy most, but whatever I use, I want what
             comes out of it to stay simple and to look good. If you want to know what I can do,
             the repositories are the honest answer; they are all linked above.
@@ -252,7 +252,7 @@
           <p>
             <b>Languages:</b> Python, Java, SQL, JavaScript, TypeScript<br>
             <b>Databases:</b> PostgreSQL, SQLite<br>
-            <b>Frameworks &amp; libraries:</b> Spring Boot, FastAPI, Express, SQLAlchemy, React, Vite, Tailwind CSS<br>
+            <b>Frameworks &amp; libraries:</b> Spring Boot, FastAPI, Express, SQLAlchemy, pydantic-ai, GeoPandas<br>
             <b>Tools &amp; platforms:</b> Git, Docker, Maven, Render, Linux
           </p>
         </div>
