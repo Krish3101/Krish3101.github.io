@@ -164,58 +164,12 @@
               <dd>Java 21, Spring Boot 3.4 and Spring Data JPA over PostgreSQL, packaged with Docker.</dd>
             </dl>
             <p class="detail__links">
-              <a class="btn" href="https://traffic-app-oxw2.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take about a minute">Live demo</a>
+              <a class="btn" href="https://traffic-app-oxw2.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take up to two minutes">Live demo</a>
               <a href="https://github.com/Krish3101/trafficengine" target="_blank" rel="noopener">Source on GitHub</a>
             </p>
           </div>
         </details>
-        <a class="entry__live" href="https://traffic-app-oxw2.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take about a minute">Live demo<span aria-hidden="true"> &#8599;</span></a>
-      </article>
-
-      <article class="entry">
-        <details>
-          <summary>
-            <span class="entry__num" aria-hidden="true">03</span>
-            <h3 class="entry__name">text-to-sql</h3>
-            <span class="entry__stack">Python &middot; sqlglot</span>
-            <span class="entry__lede">Ask a question in English, get a SQLite query, and run it against a bundled sample database.</span>
-            <span class="entry__cue"></span>
-          </summary>
-          <div class="detail">
-            <figure class="figure">
-              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-text-to-sql">
-                <title id="dg-text-to-sql">How text-to-sql checks a generated query</title>
-                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
-                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
-                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
-                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
-                <text class="dg-t" x="80" y="30">English</text>
-                <text class="dg-t" x="80" y="48">question</text>
-                <rect class="dg-box" x="184" y="6" width="152" height="58"/>
-                <text class="dg-t" x="260" y="30">Model</text>
-                <text class="dg-t" x="260" y="48">drafts SQL</text>
-                <rect class="dg-box dg-box--core" x="364" y="6" width="152" height="58"/>
-                <text class="dg-t dg-t--core" x="440" y="30">sqlglot</text>
-                <text class="dg-t dg-t--core" x="440" y="48">classify the tree</text>
-                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
-                <text class="dg-t" x="620" y="30">Read-only run</text>
-                <text class="dg-t" x="620" y="48">writes need approval</text>
-              </svg>
-              <figcaption>The query is classified from its syntax tree rather than from its text, so the same statement phrased differently cannot slip past.</figcaption>
-            </figure>
-            <dl class="detail__rows">
-              <dt>The problem</dt>
-              <dd>A generated query is untrusted input that happens to look like SQL. Checking it by matching strings fails as soon as the same statement is phrased a little differently.</dd>
-              <dt>The decision</dt>
-              <dd>Every query is parsed into a syntax tree before it runs. Reads open on a read-only connection; anything that writes needs explicit approval first.</dd>
-              <dt>Stack</dt>
-              <dd>Streamlit, sqlglot, pandas and SQLite, with the model called over OpenRouter through <code>urllib</code>.</dd>
-            </dl>
-            <p class="detail__links">
-              <a href="https://github.com/Krish3101/text-to-sql" target="_blank" rel="noopener">Source on GitHub</a>
-            </p>
-          </div>
-        </details>
+        <a class="entry__live" href="https://traffic-app-oxw2.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take up to two minutes">Live demo<span aria-hidden="true"> &#8599;</span></a>
       </article>
 
       <article class="entry entry--live">
@@ -266,51 +220,6 @@
         <a class="entry__live" href="https://disputeledger.onrender.com" target="_blank" rel="noopener" title="Free hosting, so the first load can take about a minute">Live demo<span aria-hidden="true"> &#8599;</span></a>
       </article>
 
-      <article class="entry">
-        <details>
-          <summary>
-            <span class="entry__num" aria-hidden="true">05</span>
-            <h3 class="entry__name">croprisk</h3>
-            <span class="entry__stack">Python &middot; React</span>
-            <span class="entry__lede">Turns a five-day forecast into a risk score for a specific crop at its current growth stage.</span>
-            <span class="entry__cue"></span>
-          </summary>
-          <div class="detail">
-            <figure class="figure">
-              <svg viewBox="0 0 700 74" role="img" aria-labelledby="dg-croprisk">
-                <title id="dg-croprisk">How croprisk turns a forecast into a score</title>
-                <path class="dg-arw" d="M160 35h14"/><path class="dg-tip" d="M173 31l10 4-10 4z"/>
-                <path class="dg-arw" d="M340 35h14"/><path class="dg-tip" d="M353 31l10 4-10 4z"/>
-                <path class="dg-arw" d="M520 35h14"/><path class="dg-tip" d="M533 31l10 4-10 4z"/>
-                <rect class="dg-box" x="4" y="6" width="152" height="58"/>
-                <text class="dg-t" x="80" y="30">Forecast</text>
-                <text class="dg-t" x="80" y="48">five days</text>
-                <rect class="dg-box dg-box--core" x="184" y="6" width="152" height="58"/>
-                <text class="dg-t dg-t--core" x="260" y="30">Score hazards</text>
-                <text class="dg-t dg-t--core" x="260" y="48">per crop and stage</text>
-                <rect class="dg-box" x="364" y="6" width="152" height="58"/>
-                <text class="dg-t" x="440" y="30">Risk score</text>
-                <text class="dg-t" x="440" y="48">0&ndash;100 and a band</text>
-                <rect class="dg-box" x="544" y="6" width="152" height="58"/>
-                <text class="dg-t" x="620" y="30">Advice</text>
-                <text class="dg-t" x="620" y="48">LLM or fallback</text>
-              </svg>
-              <figcaption>The score is arithmetic. The model only words the advice, after the number is already fixed.</figcaption>
-            </figure>
-            <dl class="detail__rows">
-              <dt>The problem</dt>
-              <dd>The same weather means different things to different crops. A hot week barely matters to wheat that has ripened and does real damage to wheat at flowering.</dd>
-              <dt>The decision</dt>
-              <dd>Five hazards are scored against thresholds for that crop at its current stage, in code with no I/O. An LLM only rewrites the finished numbers as advice, and a written fallback covers it when no key is set.</dd>
-              <dt>Stack</dt>
-              <dd>FastAPI, SQLAlchemy and SQLite, with React, TypeScript, Tailwind and Recharts on the front end. Forecasts from OpenWeather.</dd>
-            </dl>
-            <p class="detail__links">
-              <a href="https://github.com/Krish3101/croprisk" target="_blank" rel="noopener">Source on GitHub</a>
-            </p>
-          </div>
-        </details>
-      </article>
     </div>
   </section>
 
