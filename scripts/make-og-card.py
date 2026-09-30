@@ -50,7 +50,7 @@ def main() -> None:
 
     draw.line([(MARGIN, 452), (WIDTH - MARGIN, 452)], fill=RULE, width=1)
 
-    stack = "Java  ·  Spring Boot  ·  Python  ·  FastAPI  ·  TypeScript  ·  React  ·  PostGIS"
+    stack = "Java  ·  Spring Boot  ·  Python  ·  FastAPI  ·  TypeScript  ·  React  ·  PostgreSQL"
     draw.text((MARGIN, 486), stack, font=font("Georgia.ttf", 25), fill=MUTED)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
