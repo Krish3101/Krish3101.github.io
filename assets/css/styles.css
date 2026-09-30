@@ -146,9 +146,6 @@ b { font-weight: 500; }
   margin: 0;
 }
 
-.section__note { margin: 0; font-size: 16px; color: var(--ink-muted); }
-
-
 /* work entries */
 
 .entry { border-bottom: 1px solid var(--rule); }
